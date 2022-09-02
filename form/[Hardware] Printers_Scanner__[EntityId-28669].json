@@ -1,0 +1,217 @@
+{
+  "form": {
+    "entityId": 28669,
+    "name": "[Hardware] Printers/Scanner",
+    "description": null,
+    "titleFormat": {
+      "format": "[Printer/Scanner] {1}",
+      "arguments": [
+        "requestType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Hardware \u003E Printers/Scanner",
+        "description": "### Please get started by filling in the form below:",
+        "identifier": "g0hol3",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "What would you like to do?",
+        "identifier": "requestType",
+        "required": false,
+        "choices": [
+          {
+            "name": "Report an ongoing issue",
+            "identifier": "prtScnIssue"
+          },
+          {
+            "name": "Request new hardware",
+            "identifier": "prtScnRequest"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [
+      {
+        "name": "Issue",
+        "identifier": "issue_section",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "What type of device do you have an issue with?",
+            "identifier": "issueType",
+            "required": true,
+            "choices": [
+              {
+                "name": "Printers",
+                "identifier": "printerIssue"
+              },
+              {
+                "name": "Scanners",
+                "identifier": "scannerIssue"
+              },
+              {
+                "name": "Other",
+                "identifier": "otherIssue"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "What is the type of device that you have an issue with?",
+            "identifier": "m9llc4",
+            "required": false,
+            "condition": {
+              "parentId": "issue_section",
+              "parentFieldId": "issueType",
+              "operator": "in",
+              "identifiers": [
+                "otherIssue"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "Could you please describe the issue that you are facing?",
+            "identifier": "9oa8q8",
+            "required": true
+          },
+          {
+            "type": "single_choice",
+            "name": "How many people is this issue affecting?",
+            "identifier": "lgknh6",
+            "required": true,
+            "choices": [
+              {
+                "name": "Only me",
+                "identifier": "single"
+              },
+              {
+                "name": "Me and some others",
+                "identifier": "multi"
+              },
+              {
+                "name": "Everyone",
+                "identifier": "everyone"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "Where is the location of the device?",
+            "identifier": "u3xtu0",
+            "required": true
+          },
+          {
+            "type": "long_text",
+            "name": "Additional Notes",
+            "identifier": "jnf3qt",
+            "required": false
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "prtScnIssue"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Request",
+        "identifier": "request_section",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "What type of device do you need?",
+            "identifier": "lxe7sv",
+            "required": true,
+            "choices": [
+              {
+                "name": "Scanner",
+                "identifier": "ifwdqf"
+              },
+              {
+                "name": "Printer",
+                "identifier": "hbbg8u"
+              }
+            ]
+          },
+          {
+            "type": "single_choice",
+            "name": "Is this device hand held?",
+            "identifier": "gxrac3",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "wftefd"
+              },
+              {
+                "name": "No",
+                "identifier": "3ilcqp"
+              }
+            ],
+            "condition": {
+              "parentId": "request_section",
+              "parentFieldId": "lxe7sv",
+              "operator": "in",
+              "identifiers": [
+                "ifwdqf"
+              ]
+            }
+          },
+          {
+            "type": "long_text",
+            "name": "Where you like this device to be placed?",
+            "description": "If the device is hand held, you may enter N/A",
+            "identifier": "wwstux",
+            "required": true
+          },
+          {
+            "type": "single_choice",
+            "name": "Is there a network port located close to install location?",
+            "identifier": "pv9wzi",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "1ymib3"
+              },
+              {
+                "name": "No",
+                "identifier": "sg9xdb"
+              },
+              {
+                "name": "Unsure",
+                "identifier": "k60him"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "prtScnRequest"
+            ]
+          }
+        ]
+      }
+    ],
+    "etag": "01000000-0000-1DD5-0000-00000000659D"
+  }
+}
