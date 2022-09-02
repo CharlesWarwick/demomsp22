@@ -1,0 +1,34 @@
+{
+  "entityId": "289-A",
+  "name": "Are you effected",
+  "tags": [
+    "sln-demomsp9-dskdir-v0-0-2",
+    "08-08-2022"
+  ],
+  "enabled": false,
+  "items": [
+    {
+      "entityId": "321-A",
+      "question": "Out of 10, how effected are you?",
+      "allowComment": true,
+      "type": "nps"
+    },
+    {
+      "entityId": "322-A",
+      "question": "Are you OK with the situation?",
+      "allowComment": true,
+      "type": "csat"
+    }
+  ],
+  "deletedItems": [],
+  "alerts": {
+    "onNegative": null
+  },
+  "meta": {
+    "updatedAt": "2022-08-08T04:37:01.0936318Z",
+    "updatedBy": {
+      "entityId": "l_api_key.static",
+      "name": "API Key"
+    }
+  }
+}
