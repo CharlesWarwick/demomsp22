@@ -1,0 +1,14 @@
+{
+  "entityId": "11",
+  "type": "extension",
+  "name": "Account Management",
+  "icon": "account_balance_wallet",
+  "tags": [],
+  "canReset": false,
+  "webContent": {
+    "url": "https://demo.deskdirector.com/admin/v2/portal/menus/menu-items/create",
+    "enableSandbox": false,
+    "sandboxAttributes": [],
+    "queryParameters": []
+  }
+}
