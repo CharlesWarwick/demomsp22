@@ -1,0 +1,25 @@
+{
+  "entityId": "322-A",
+  "name": "Sales question",
+  "tags": [
+    "sln-demomsp9-dskdir-v0-0-2",
+    "08-08-2022"
+  ],
+  "enabled": false,
+  "items": [],
+  "deletedItems": [],
+  "alerts": {
+    "onNegative": {
+      "emails": [
+        "warwick@deskdirector.com"
+      ]
+    }
+  },
+  "meta": {
+    "updatedAt": "2022-08-08T23:49:51.5277712Z",
+    "updatedBy": {
+      "entityId": "l_api_key.static",
+      "name": "API Key"
+    }
+  }
+}
