@@ -1,0 +1,263 @@
+{
+  "form": {
+    "entityId": 28670,
+    "name": "[Hardware] WiFi",
+    "description": null,
+    "titleFormat": {
+      "format": "[WiFi] {1}",
+      "arguments": [
+        "requestType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Hardware \u003E WiFi",
+        "description": "### Please get started by filling in the form below:",
+        "identifier": "3b6hih",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "What would you like to do?",
+        "identifier": "requestType",
+        "required": true,
+        "choices": [
+          {
+            "name": "Report stolen/lost device",
+            "identifier": "stolenDevice"
+          },
+          {
+            "name": "WiFi won\u0027t connect to network",
+            "identifier": "connectionIssue"
+          },
+          {
+            "name": "Request new WiFi network",
+            "identifier": "newWifi"
+          },
+          {
+            "name": "Activate WiFi",
+            "identifier": "activateWifi"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [
+      {
+        "name": "Stolen Device",
+        "identifier": "hc4506",
+        "fields": [
+          {
+            "type": "long_text",
+            "name": "Could you please describe what had happen?",
+            "identifier": "zxijnc",
+            "required": true
+          },
+          {
+            "type": "date",
+            "name": "When did you realise that the device was stolen?",
+            "identifier": "upvfyt",
+            "required": true
+          },
+          {
+            "type": "single_choice",
+            "name": "How many people are affected by this?",
+            "description": "Has any of your co-workers also had any device stolen or is missing",
+            "identifier": "pvqtqi",
+            "required": true,
+            "choices": [
+              {
+                "name": "Just me",
+                "identifier": "p3vdzf"
+              },
+              {
+                "name": "Me and some others",
+                "identifier": "jmhyut"
+              },
+              {
+                "name": "Everyone",
+                "identifier": "6sc5y8"
+              }
+            ]
+          },
+          {
+            "type": "single_choice",
+            "name": "Will you require a replacement device?",
+            "identifier": "gknk35",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "wmcnhf"
+              },
+              {
+                "name": "No",
+                "identifier": "szb5ko"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "stolenDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Connection",
+        "identifier": "xxke9a",
+        "fields": [
+          {
+            "type": "short_text",
+            "name": "Which network do you need your WiFi to connect to?",
+            "identifier": "t13ayu",
+            "required": true
+          },
+          {
+            "type": "date",
+            "name": "When did the device stop connecting?",
+            "identifier": "m1ydwx",
+            "required": true
+          },
+          {
+            "type": "single_choice",
+            "name": "How many people are affected by this?",
+            "description": "Has any of your co-workers also had any device stolen or is missing",
+            "identifier": "gkz2eg",
+            "required": true,
+            "choices": [
+              {
+                "name": "Just me",
+                "identifier": "uy96cw"
+              },
+              {
+                "name": "Me and some others",
+                "identifier": "sckvbo"
+              },
+              {
+                "name": "Everyone",
+                "identifier": "6zvcum"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "connectionIssue"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "New Device",
+        "identifier": "atz6hf",
+        "fields": [
+          {
+            "type": "long_text",
+            "name": "What is the reason you require a new device?",
+            "identifier": "77sr75",
+            "required": true
+          },
+          {
+            "type": "long_text",
+            "name": "Where would you like to install the device?",
+            "identifier": "kyfymt",
+            "required": true
+          },
+          {
+            "type": "single_choice",
+            "name": "Is there a network port located close by?",
+            "identifier": "aed30a",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "ibnzc3"
+              },
+              {
+                "name": "No",
+                "identifier": "elrzik"
+              }
+            ]
+          },
+          {
+            "type": "date",
+            "name": "When would you like the device installed by?",
+            "identifier": "4xt5qi",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "newWifi"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Activate Device",
+        "identifier": "yopqtu",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Was the WiFi device recently installed?",
+            "identifier": "z018p8",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "bvwpsz"
+              },
+              {
+                "name": "No",
+                "identifier": "68jomz"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "What is the IP address of the WiFi device?",
+            "description": "If you do not know this, please enter \u0022N/A\u0022",
+            "identifier": "vguq02",
+            "required": true
+          },
+          {
+            "type": "date",
+            "name": "When do you need the WiFi device activated by?",
+            "identifier": "b3bqrp",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "activateWifi"
+            ]
+          }
+        ]
+      }
+    ],
+    "etag": "01000000-0000-1DD5-0000-00000000659F"
+  }
+}
