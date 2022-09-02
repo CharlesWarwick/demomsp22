@@ -1,0 +1,18 @@
+{
+  "entityId": "5-A",
+  "name": "Webinar Oct21",
+  "icon": null,
+  "isInactive": false,
+  "company": {
+    "entityId": 27,
+    "name": "Deed and Viper",
+    "identifier": "deedandviper"
+  },
+  "managers": [],
+  "tags": [],
+  "meta": {
+    "ownerCount": 0,
+    "memberCount": 0,
+    "guestCount": 0
+  }
+}
