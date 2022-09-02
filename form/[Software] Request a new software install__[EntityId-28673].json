@@ -1,0 +1,466 @@
+{
+  "form": {
+    "entityId": 28673,
+    "name": "[Software] Request a new software install",
+    "description": null,
+    "titleFormat": {
+      "format": "[Software] {1} Installation",
+      "arguments": [
+        "packageType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Software \u003E New Install",
+        "description": "### Please fill in the form below to get started",
+        "identifier": "u6aj51",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "Would you like to install one of the packages?",
+        "identifier": "packageType",
+        "required": true,
+        "choices": [
+          {
+            "name": "Standard Operation",
+            "identifier": "standardOp"
+          },
+          {
+            "name": "Corporate",
+            "identifier": "stdCorporate"
+          },
+          {
+            "name": "Corporate (Finance)",
+            "identifier": "finCorporate"
+          },
+          {
+            "name": "Custom",
+            "identifier": "customSoftware"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [
+      {
+        "name": "Standard Operation",
+        "identifier": "ncxq7b",
+        "fields": [
+          {
+            "type": "statement",
+            "name": "Standard Operation Package",
+            "description": "### This is a pre-defined software package\n\nIt includes the following software: \n\n| Included |\n| ---------|\n\n\nIf you require other software, please select a custom solution instead",
+            "identifier": "lb7cz2",
+            "required": false
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "packageType",
+            "operator": "in",
+            "identifiers": [
+              "standardOp"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Corporate",
+        "identifier": "254qcn",
+        "fields": [
+          {
+            "type": "statement",
+            "name": "Corporate Package",
+            "description": "### This is a pre-defined software package\n\nIt includes the following software: \n\n| Included |\n| ---------|\n\n\nIf you require other software, please select a custom solution instead",
+            "identifier": "ndi17v",
+            "required": false
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "packageType",
+            "operator": "in",
+            "identifiers": [
+              "stdCorporate"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Corporate (Finance)",
+        "identifier": "cmea4x",
+        "fields": [
+          {
+            "type": "statement",
+            "name": "Finance Package",
+            "description": "### This is a pre-defined software package\n\nIt includes the following software: \n\n| Included |\n| ---------|\n\n\nIf you require other software, please select a custom solution instead",
+            "identifier": "8airdh",
+            "required": false
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "packageType",
+            "operator": "in",
+            "identifiers": [
+              "finCorporate"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Custom",
+        "identifier": "customSolution",
+        "fields": [
+          {
+            "type": "multiple_choice",
+            "name": "Please select from the categories below:",
+            "description": "### Please get started by filling in the form below:",
+            "identifier": "categories",
+            "required": false,
+            "choices": [
+              {
+                "name": "General",
+                "identifier": "general"
+              },
+              {
+                "name": "Utilitiy",
+                "identifier": "utility"
+              },
+              {
+                "name": "Development",
+                "identifier": "development"
+              },
+              {
+                "name": "Customer Portal",
+                "identifier": "customerPortal"
+              },
+              {
+                "name": "Adobe",
+                "identifier": "adobe"
+              },
+              {
+                "name": "Microsoft Office 365",
+                "identifier": "office365"
+              },
+              {
+                "name": "Anti-virus",
+                "identifier": "antiVirus"
+              },
+              {
+                "name": "Communication",
+                "identifier": "communication"
+              }
+            ]
+          },
+          {
+            "type": "api_multi_select",
+            "name": "Microsoft Office 365",
+            "description": "![Microsoft Office 365](https://deskdirectorfiles.blob.core.windows.net/images/logo/Office365.png)",
+            "identifier": "da6ww3",
+            "required": false,
+            "api": {
+              "method": "POST",
+              "url": "https://prod-14.australiasoutheast.logic.azure.com:443/workflows/749a0ac9a83542e8aba55056c840ee9d/triggers/manual/paths/invoke?api-version=2016-06-01\u0026sp=%2Ftriggers%2Fmanual%2Frun\u0026sv=1.0\u0026sig=LqndJjg021Ys9X5TyKFXVqiUZKWoDqXC-Ap0Q0TUMCo\u0026type=office365",
+              "queryParams": null
+            },
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "office365"
+              ]
+            }
+          },
+          {
+            "type": "api_multi_select",
+            "name": "Adobe",
+            "description": "![Adobe](https://deskdirectorfiles.blob.core.windows.net/images/logo/Adobe.png)",
+            "identifier": "dnsh33",
+            "required": false,
+            "api": {
+              "method": "POST",
+              "url": "https://prod-14.australiasoutheast.logic.azure.com:443/workflows/749a0ac9a83542e8aba55056c840ee9d/triggers/manual/paths/invoke?api-version=2016-06-01\u0026sp=%2Ftriggers%2Fmanual%2Frun\u0026sv=1.0\u0026sig=LqndJjg021Ys9X5TyKFXVqiUZKWoDqXC-Ap0Q0TUMCo\u0026type=adobe",
+              "queryParams": null
+            },
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "adobe"
+              ]
+            }
+          },
+          {
+            "type": "multiple_choice",
+            "name": "Anti-virus",
+            "identifier": "wdteat",
+            "required": false,
+            "choices": [
+              {
+                "name": "Malwarebytes",
+                "identifier": "LUV1zIxb"
+              }
+            ],
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "antiVirus"
+              ]
+            }
+          },
+          {
+            "type": "multiple_choice",
+            "name": "ESET",
+            "description": "![ESET](https://deskdirectorfiles.blob.core.windows.net/images/logo/ESET.png)",
+            "identifier": "jr8wu8",
+            "required": false,
+            "choices": [
+              {
+                "name": "ESET Endpoint Security",
+                "identifier": "6sf8YSrk"
+              },
+              {
+                "name": "ESET File Security",
+                "identifier": "7Zj99lj4"
+              },
+              {
+                "name": "ESET Management Agent",
+                "identifier": "vhlNLJbI"
+              },
+              {
+                "name": "ESET PROTECT Server",
+                "identifier": "iRj1eDNQ"
+              },
+              {
+                "name": "ESET Rogue Detection Sensor",
+                "identifier": "FkbJr5gR"
+              }
+            ],
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "antiVirus"
+              ]
+            }
+          },
+          {
+            "type": "multiple_choice",
+            "name": "FileZilla",
+            "identifier": "fileZilla",
+            "required": false,
+            "choices": [
+              {
+                "name": "FileZilla Client",
+                "identifier": "7KmQ5tbs"
+              },
+              {
+                "name": "FileZilla Server",
+                "identifier": "8qtWWTjP"
+              }
+            ],
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "utility"
+              ]
+            }
+          },
+          {
+            "type": "multiple_choice",
+            "name": "Browser",
+            "identifier": "broswers",
+            "required": false,
+            "choices": [
+              {
+                "name": "Chrome",
+                "identifier": "7kH7BLq3"
+              },
+              {
+                "name": "Google Chrome",
+                "identifier": "tCyaXgqX"
+              },
+              {
+                "name": "Mozilla Firefox",
+                "identifier": "KErcBZZ8"
+              }
+            ],
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "general"
+              ]
+            }
+          },
+          {
+            "type": "multiple_choice",
+            "name": "Logitech",
+            "identifier": "logitech",
+            "required": false,
+            "choices": [
+              {
+                "name": "Logitech Camera Settings",
+                "identifier": "SNfpMSL0"
+              },
+              {
+                "name": "Logitech Capture",
+                "identifier": "BR5xHBDI"
+              },
+              {
+                "name": "Logitech Webcam Software",
+                "identifier": "g1KoU9Wl"
+              }
+            ],
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "utility"
+              ]
+            }
+          },
+          {
+            "type": "multiple_choice",
+            "name": "Development",
+            "identifier": "owmp89",
+            "required": false,
+            "choices": [
+              {
+                "name": "Microsoft Silverlight",
+                "identifier": "Qe7bv4Vh"
+              },
+              {
+                "name": "Microsoft Visio",
+                "identifier": "wdw4eQ2u"
+              },
+              {
+                "name": "Microsoft Visual Studio",
+                "identifier": "Gu7bnvb1"
+              }
+            ],
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "development"
+              ]
+            }
+          },
+          {
+            "type": "multiple_choice",
+            "name": "Text Editor",
+            "identifier": "textEditor",
+            "required": false,
+            "choices": [
+              {
+                "name": "Notepad\u002B\u002B",
+                "identifier": "Xn4lhJRi"
+              }
+            ],
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "general",
+                "development"
+              ]
+            }
+          },
+          {
+            "type": "multiple_choice",
+            "name": "Media Player",
+            "identifier": "mediaPlayer",
+            "required": false,
+            "choices": [
+              {
+                "name": "iTunes",
+                "identifier": "QVQKhjS8"
+              },
+              {
+                "name": "QuickTime Player",
+                "identifier": "XkQX7TM1"
+              }
+            ],
+            "condition": {
+              "parentId": "customSolution",
+              "parentFieldId": "categories",
+              "operator": "contains_any",
+              "identifiers": [
+                "general"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "packageType",
+            "operator": "in",
+            "identifiers": [
+              "customSoftware"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Custom Non-standard",
+        "identifier": "m4yuyi",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Would you like to install any non-standard application?",
+            "identifier": "ckc8zi",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "miw8yp"
+              },
+              {
+                "name": "No",
+                "identifier": "gtrido"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "Please list the application that you would like to install with a brief reason",
+            "identifier": "uqntyv",
+            "required": true,
+            "condition": {
+              "parentId": "m4yuyi",
+              "parentFieldId": "ckc8zi",
+              "operator": "in",
+              "identifiers": [
+                "miw8yp"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "etag": "01000000-0000-1DD5-0000-0000000065A6"
+  }
+}
