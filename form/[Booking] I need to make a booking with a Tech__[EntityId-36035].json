@@ -1,0 +1,172 @@
+{
+  "form": {
+    "entityId": 36035,
+    "name": "[Booking] I need to make a booking with a Tech",
+    "description": "This form was automatically created on 29-07-2022",
+    "titleFormat": {
+      "format": "Tech Booking with {1} for {2}",
+      "arguments": [
+        "dd-booking-tech",
+        "dd-booking-duration"
+      ]
+    },
+    "tags": [
+      "booking",
+      "2022",
+      "cwe",
+      "sln-booking"
+    ],
+    "fields": [
+      {
+        "type": "api_single_select",
+        "name": "Select your Time Zone",
+        "identifier": "dd-booking-timeZone",
+        "required": true,
+        "api": {
+          "method": "GET",
+          "url": "https://8ebe-210-54-149-9.ngrok.io/api/lookup/timezone",
+          "queryParams": null
+        }
+      },
+      {
+        "type": "single_choice",
+        "name": "Select your Date Range",
+        "identifier": "dd-booking-dateRange",
+        "required": true,
+        "choices": [
+          {
+            "name": "This Week",
+            "identifier": "week00"
+          },
+          {
+            "name": "Next Week",
+            "identifier": "week01"
+          },
+          {
+            "name": "The Week After",
+            "identifier": "week02"
+          },
+          {
+            "name": "Custom",
+            "identifier": "custom"
+          }
+        ],
+        "meta": {
+          "render": "dropdown"
+        }
+      },
+      {
+        "type": "date",
+        "name": "Select your Start Date range",
+        "identifier": "dd-booking-startdate",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "dd-booking-dateRange",
+          "operator": "in",
+          "identifiers": [
+            "custom"
+          ]
+        },
+        "meta": {
+          "render": "date"
+        }
+      },
+      {
+        "type": "date",
+        "name": "Select your End Date range",
+        "identifier": "dd-booking-enddate",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "dd-booking-dateRange",
+          "operator": "in",
+          "identifiers": [
+            "custom"
+          ]
+        },
+        "meta": {
+          "render": "date"
+        }
+      },
+      {
+        "type": "api_single_select",
+        "name": "Select your Duration",
+        "identifier": "dd-booking-duration",
+        "required": true,
+        "api": {
+          "method": "GET",
+          "url": "https://8ebe-210-54-149-9.ngrok.io/api/lookup/bookingduration",
+          "queryParams": null
+        }
+      },
+      {
+        "type": "api_single_select",
+        "name": "Select your Tech",
+        "identifier": "dd-booking-tech",
+        "required": true,
+        "api": {
+          "method": "GET",
+          "url": "https://8ebe-210-54-149-9.ngrok.io/api/lookup/user/demomsp22?secretToken=RhJPagzOkE6OnW7bntSuvA",
+          "queryParams": null
+        }
+      },
+      {
+        "type": "api_single_select",
+        "name": "Select your Booking",
+        "identifier": "dd-booking-date",
+        "required": true,
+        "api": {
+          "method": "GET",
+          "url": "https://8ebe-210-54-149-9.ngrok.io/api/filter/demomsp22?secretToken=RhJPagzOkE6OnW7bntSuvA\u0026dd-booking-timeZone\u0026dd-booking-dateRange\u0026dd-booking-duration\u0026dd-booking-tech",
+          "queryParams": null
+        },
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "dd-booking-dateRange",
+          "operator": "in",
+          "identifiers": [
+            "week00",
+            "week01",
+            "week02"
+          ]
+        }
+      },
+      {
+        "type": "api_single_select",
+        "name": "Select your Booking",
+        "identifier": "dd-booking-date-2",
+        "required": true,
+        "api": {
+          "method": "GET",
+          "url": "https://8ebe-210-54-149-9.ngrok.io/api/filterrange/demomsp22?secretToken=RhJPagzOkE6OnW7bntSuvA\u0026dd-booking-timeZone\u0026dd-booking-startdate\u0026dd-booking-enddate\u0026dd-booking-duration\u0026dd-booking-tech",
+          "queryParams": null
+        },
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "dd-booking-dateRange",
+          "operator": "in",
+          "identifiers": [
+            "custom"
+          ]
+        }
+      },
+      {
+        "type": "long_text",
+        "name": "Additional Notes (Optional).",
+        "identifier": "dd-booking-notes",
+        "required": false
+      },
+      {
+        "type": "file",
+        "name": "Attachments",
+        "identifier": "dd-booking-files",
+        "required": false
+      }
+    ],
+    "readonly": false,
+    "sections": [],
+    "webhook": "https://8ebe-210-54-149-9.ngrok.io/api/createbooking/demomsp22",
+    "etag": "01000000-0000-1DE9-0000-000000002121"
+  }
+}
