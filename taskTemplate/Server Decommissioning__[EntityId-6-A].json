@@ -1,0 +1,120 @@
+{
+  "entityId": "6-A",
+  "name": "Server Decommissioning",
+  "tags": [],
+  "filter": null,
+  "items": [
+    {
+      "instruction": "Remove from Active Directory",
+      "description": null
+    },
+    {
+      "instruction": "Remove from DNS (private and public)",
+      "description": null
+    },
+    {
+      "instruction": "Remove from AV (ESET, Endpoint etc)",
+      "description": null
+    },
+    {
+      "instruction": "Remove from LabTech",
+      "description": null
+    },
+    {
+      "instruction": "Remove from Backup Selections",
+      "description": null
+    },
+    {
+      "instruction": "Delete associated DHCP Reservations",
+      "description": null
+    },
+    {
+      "instruction": "Firewall: Remove from AWS Security Groups",
+      "description": null
+    },
+    {
+      "instruction": "Firewall: Remove from Azure NSGs",
+      "description": null
+    },
+    {
+      "instruction": "Firewall: Remove Local Firewall (i.e. SonicWall) Access Rules",
+      "description": null
+    },
+    {
+      "instruction": "Firewall: Remove from Local Firewall (i.e. SonicWall) NAT Rules",
+      "description": null
+    },
+    {
+      "instruction": "Delete from StatusCake",
+      "description": null
+    },
+    {
+      "instruction": "Update Network diagrams",
+      "description": null
+    },
+    {
+      "instruction": "Archive relevant IT Glue documentation",
+      "description": null
+    },
+    {
+      "instruction": "Revoke Licenses",
+      "description": null
+    },
+    {
+      "instruction": "Delete PSA configuration items",
+      "description": null
+    },
+    {
+      "instruction": "Delete Local (vSphere, Hyper-V) Virtual Machine",
+      "description": null
+    },
+    {
+      "instruction": "Delete AWS Virtual Machine",
+      "description": null
+    },
+    {
+      "instruction": "Delete Azure Virtual Machine",
+      "description": null
+    },
+    {
+      "instruction": "Delete Local (vSphere, Hyper-V) Snapshots",
+      "description": null
+    },
+    {
+      "instruction": "Delete AWS and Azure Snapshots",
+      "description": null
+    },
+    {
+      "instruction": "Engage Customer Regarding Backup Archival/Deletion",
+      "description": null
+    },
+    {
+      "instruction": "Release Elastic/Public IPs",
+      "description": null
+    },
+    {
+      "instruction": "Delete Volumes",
+      "description": null
+    },
+    {
+      "instruction": "Physical Servers: Destroy RAID",
+      "description": null
+    },
+    {
+      "instruction": "Physical Servers: Wipe Drives",
+      "description": {
+        "content": "Engage third-party destruction services if required",
+        "type": "markdown"
+      }
+    }
+  ],
+  "creator": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  },
+  "lastModifiedAt": "2022-03-24T03:30:37.802243Z",
+  "lastModifiedBy": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  }
+}
