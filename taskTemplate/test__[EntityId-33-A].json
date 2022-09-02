@@ -1,0 +1,16 @@
+{
+  "entityId": "33-A",
+  "name": "test",
+  "tags": [],
+  "filter": null,
+  "items": [],
+  "creator": {
+    "entityId": "m~20005",
+    "name": "chungn8w"
+  },
+  "lastModifiedAt": "2022-07-20T00:46:08.812539Z",
+  "lastModifiedBy": {
+    "entityId": "m~20005",
+    "name": "chungn8w"
+  }
+}
