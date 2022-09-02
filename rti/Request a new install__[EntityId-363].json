@@ -1,0 +1,36 @@
+{
+  "general": {
+    "entityId": 363,
+    "enabled": true,
+    "parentName": "Software",
+    "name": "Request a new install",
+    "tags": [
+      "software",
+      "sc-general",
+      "flow-automation"
+    ],
+    "parentOptions": [
+      "Account/Access",
+      "DeploySolution",
+      "Hardware",
+      "Microsoft Office 365",
+      "Software"
+    ],
+    "titleTemplate": null,
+    "bodyTemplate": null,
+    "formUrl": null,
+    "formRedirect": null,
+    "ddForm": {
+      "entityId": 28582,
+      "name": null
+    },
+    "taskTemplates": []
+  },
+  "ticket": {},
+  "filter": {
+    "entityId": 363,
+    "name": "Request a new install",
+    "rootFlag": true,
+    "inverseFlagTargets": []
+  }
+}
