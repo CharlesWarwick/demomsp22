@@ -1,0 +1,66 @@
+{
+  "entityId": "5-A",
+  "name": "Ticket Escalation",
+  "tags": [],
+  "filter": null,
+  "items": [
+    {
+      "instruction": "What is the risk to the business or person?",
+      "description": {
+        "content": "Describe the risk to the persons work or business affected by this issue",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Is this for a VIP?",
+      "description": {
+        "content": "Is this for ticket or issue for a VIP (Director, CEO, CFO, etc...?)",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "How many people are affected by this issue?",
+      "description": {
+        "content": "Is this affecting 1 person, many or entire organisation?",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "What is the severity or urgency on this?",
+      "description": {
+        "content": "Is this a P1, P2 or P3 based on the previous answers?",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "How can you reproduce the issue or problem?",
+      "description": {
+        "content": "Describe the steps to reproduce the issue/problem",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "What have you already tried to resolve the issue?",
+      "description": {
+        "content": "Has any of it worked?",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Do you have a workaround you have suggested to the user?",
+      "description": {
+        "content": "If \u0027Yes\u0027 then what is it?",
+        "type": "markdown"
+      }
+    }
+  ],
+  "creator": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  },
+  "lastModifiedAt": "2022-03-24T03:30:36.4092588Z",
+  "lastModifiedBy": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  }
+}
