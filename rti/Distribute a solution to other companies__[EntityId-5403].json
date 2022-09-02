@@ -1,0 +1,34 @@
+{
+  "general": {
+    "entityId": 5403,
+    "enabled": true,
+    "parentName": "DeploySolution",
+    "name": "Distribute a solution to other companies",
+    "tags": [
+      "solutiondeploy"
+    ],
+    "parentOptions": [
+      "Account/Access",
+      "DeploySolution",
+      "Hardware",
+      "Microsoft Office 365",
+      "Software"
+    ],
+    "titleTemplate": null,
+    "bodyTemplate": null,
+    "formUrl": null,
+    "formRedirect": null,
+    "ddForm": {
+      "entityId": 38251,
+      "name": "DistributeSolution"
+    },
+    "taskTemplates": []
+  },
+  "ticket": {},
+  "filter": {
+    "entityId": 5403,
+    "name": "Distribute a solution to other companies",
+    "rootFlag": true,
+    "inverseFlagTargets": []
+  }
+}
