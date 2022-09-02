@@ -1,0 +1,100 @@
+{
+  "form": {
+    "entityId": 28586,
+    "name": "[Microsoft Office 365] Multi-factor Authentication Setup",
+    "description": null,
+    "titleFormat": {
+      "format": "[MFA] {1}",
+      "arguments": [
+        "requestType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Microsoft Office 365 \u003E Setup new multi-factor authentication",
+        "identifier": "yqok5k",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "Have you setup multi-factor authentication before?",
+        "identifier": "1x75ud",
+        "required": true,
+        "choices": [
+          {
+            "name": "Yes",
+            "identifier": "craj5n"
+          },
+          {
+            "name": "No",
+            "identifier": "7a06yg"
+          }
+        ]
+      },
+      {
+        "type": "email",
+        "name": "What is the email address you would like to set this up for?",
+        "identifier": "2wdn5y",
+        "required": true
+      },
+      {
+        "type": "single_choice",
+        "name": "What type of device will you be setting this up for?",
+        "identifier": "8a5ma2",
+        "required": true,
+        "choices": [
+          {
+            "name": "Company Phone",
+            "identifier": "p6clh1"
+          },
+          {
+            "name": "Personal Phone",
+            "identifier": "ehhkks"
+          },
+          {
+            "name": "Other",
+            "identifier": "6aique"
+          }
+        ]
+      },
+      {
+        "type": "short_text",
+        "name": "What kind of device will you be using?",
+        "identifier": "p40zjr",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "8a5ma2",
+          "operator": "in",
+          "identifiers": [
+            "6aique"
+          ]
+        }
+      },
+      {
+        "type": "single_choice",
+        "name": "Will you be personally managing the recover codes?",
+        "identifier": "fkspz2",
+        "required": true,
+        "choices": [
+          {
+            "name": "Yes",
+            "identifier": "5xbf31"
+          },
+          {
+            "name": "No",
+            "identifier": "fpeulb"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [],
+    "etag": "01000000-0000-1DD5-0000-000000000316"
+  }
+}
