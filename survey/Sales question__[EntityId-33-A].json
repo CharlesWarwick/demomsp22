@@ -1,0 +1,37 @@
+{
+  "entityId": "33-A",
+  "name": "Sales question",
+  "tags": [],
+  "enabled": false,
+  "items": [
+    {
+      "entityId": "1-A",
+      "question": "How well are we doing in meeting your purchasing needs",
+      "allowComment": true,
+      "type": "csat"
+    },
+    {
+      "entityId": "2-A",
+      "question": "Overall how likely are you to recommend us to a colleague or friend",
+      "allowComment": true,
+      "type": "nps"
+    },
+    {
+      "entityId": "3-A",
+      "question": "Are our invoices clear and understandable",
+      "allowComment": true,
+      "type": "csat"
+    }
+  ],
+  "deletedItems": [],
+  "alerts": {
+    "onNegative": null
+  },
+  "meta": {
+    "updatedAt": "2022-08-08T03:11:18.2084103Z",
+    "updatedBy": {
+      "entityId": "l_api_key.static",
+      "name": "API Key"
+    }
+  }
+}
