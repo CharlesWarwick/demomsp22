@@ -1,0 +1,36 @@
+{
+  "general": {
+    "entityId": 367,
+    "enabled": true,
+    "parentName": "Account/Access",
+    "name": "Multi-factor Authentication",
+    "tags": [
+      "account",
+      "sc-general",
+      "flow-automation"
+    ],
+    "parentOptions": [
+      "Account/Access",
+      "DeploySolution",
+      "Hardware",
+      "Microsoft Office 365",
+      "Software"
+    ],
+    "titleTemplate": null,
+    "bodyTemplate": null,
+    "formUrl": null,
+    "formRedirect": null,
+    "ddForm": {
+      "entityId": 28586,
+      "name": null
+    },
+    "taskTemplates": []
+  },
+  "ticket": {},
+  "filter": {
+    "entityId": 367,
+    "name": "Multi-factor Authentication",
+    "rootFlag": true,
+    "inverseFlagTargets": []
+  }
+}
