@@ -1,0 +1,70 @@
+{
+  "entityId": "166-A",
+  "name": "Service Catalogue - General",
+  "type": "tickets",
+  "state": "enabled",
+  "source": "custom",
+  "trigger": {
+    "name": "Tickets",
+    "type": "tickets",
+    "events": [
+      "ticket.new"
+    ],
+    "conditions": [
+      {
+        "field": "ticket_form_id",
+        "operator": "equals_to_any_of",
+        "options": {
+          "integerEntities": [
+            {
+              "entityId": 28581,
+              "name": "[Hardware] General"
+            },
+            {
+              "entityId": 28578,
+              "name": "[Hardware] Printers/Scanner"
+            },
+            {
+              "entityId": 28580,
+              "name": "[Hardware] Server"
+            },
+            {
+              "entityId": 28579,
+              "name": "[Hardware] WiFi"
+            },
+            {
+              "entityId": 28584,
+              "name": "[Microsoft Office 365] Microsoft Sharepoint"
+            },
+            {
+              "entityId": 28585,
+              "name": "[Microsoft Office 365] Microsoft Teams"
+            },
+            {
+              "entityId": 28586,
+              "name": "[Microsoft Office 365] Multi-factor Authentication Setup"
+            },
+            {
+              "entityId": 28583,
+              "name": "[Microsoft Office 365] Outlook (Email)"
+            },
+            {
+              "entityId": 28582,
+              "name": "[Software] Request a new software install"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "actions": [],
+  "settings": {
+    "webhookSecret": "wU8Th8eud8mBq7Is4lpBgjf46eGpVp0c"
+  },
+  "createdAt": "2022-01-09T23:12:29.9274735Z",
+  "lastModifiedAt": "2022-01-14T00:37:27.4930166Z",
+  "lastModifiedBy": {
+    "entityId": "0",
+    "name": "Power Automate"
+  }
+}
