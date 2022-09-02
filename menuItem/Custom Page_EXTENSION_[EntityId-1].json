@@ -1,0 +1,21 @@
+{
+  "entityId": "1",
+  "type": "extension",
+  "name": "Custom Page",
+  "icon": "account_balance",
+  "tags": [],
+  "canReset": false,
+  "webContent": {
+    "url": "https://extension-reference.deskdirector.com",
+    "enableSandbox": false,
+    "sandboxAttributes": [
+      "allow-same-origin",
+      "allow-scripts",
+      "allow-top-navigation",
+      "allow-top-navigation-by-user-activation"
+    ],
+    "queryParameters": [
+      "access_token"
+    ]
+  }
+}
