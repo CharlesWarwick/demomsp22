@@ -1,0 +1,28 @@
+{
+  "entityId": "1-7548d118-fb59-48bd-953a-128455f06983",
+  "createdDateTime": "2022-08-08T03:17:01Z",
+  "displayName": "Deploy HSEincidents",
+  "lastModifiedDateTime": "2022-08-08T03:18:38Z",
+  "pages": [
+    {
+      "id": "1-37a58b6d0e7c44dd831ab52825fd91ba!15-247676b9-b990-47d6-86ec-021ca7e0f34b",
+      "title": "Hazard Report",
+      "name": "Hazard Report",
+      "lastModifiedDateTime": "2022-08-08T03:18:36Z",
+      "parentSectionId": "1-247676b9-b990-47d6-86ec-021ca7e0f34b",
+      "parentSectionDisplayName": "Reports",
+      "notebookId": "1-7548d118-fb59-48bd-953a-128455f06983",
+      "pageContent": "\u003Chtml lang=\u0022en-US\u0022\u003E\r\n\t\u003Chead\u003E\r\n\t\t\u003Ctitle\u003EHazard Report\u003C/title\u003E\r\n\t\t\u003Cmeta http-equiv=\u0022Content-Type\u0022 content=\u0022text/html; charset=utf-8\u0022 /\u003E\r\n\t\t\u003Cmeta name=\u0022created\u0022 content=\u00222021-10-31T22:24:00.0000000\u0022 /\u003E\r\n\t\u003C/head\u003E\r\n\t\u003Cbody data-absolute-enabled=\u0022true\u0022 style=\u0022font-family:Calibri;font-size:11pt\u0022\u003E\r\n\t\t\u003Cdiv style=\u0022position:absolute;left:48px;top:114px;width:624px\u0022\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\t\u003Cimg width=\u00221133\u0022 height=\u0022497\u0022 src=\u0022https://graph.microsoft.com/v1.0/siteCollections/ddportal.sharepoint.com,38194263-ff24-4189-8ef7-08a182238089,a0181d41-6614-4bf3-9bcd-9d015c98d379/onenote/resources/1-8ff3e48e37f7404daaa918211670ce2b!1-247676b9-b990-47d6-86ec-021ca7e0f34b/$value\u0022 data-src-type=\u0022image/jpeg\u0022 data-fullres-src=\u0022https://graph.microsoft.com/v1.0/siteCollections/ddportal.sharepoint.com,38194263-ff24-4189-8ef7-08a182238089,a0181d41-6614-4bf3-9bcd-9d015c98d379/onenote/resources/1-8ff3e48e37f7404daaa918211670ce2b!1-247676b9-b990-47d6-86ec-021ca7e0f34b/$value\u0022 data-fullres-src-type=\u0022image/jpeg\u0022 /\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\u003C/div\u003E\r\n\t\u003C/body\u003E\r\n\u003C/html\u003E\r\n"
+    },
+    {
+      "id": "1-234fea3f663c4c649d02c11b05708bac!247-0866818a-b983-496b-a346-5bc3bedbd515",
+      "title": "How to report a hazard",
+      "name": "How to report a hazard",
+      "lastModifiedDateTime": "2022-08-08T03:18:40Z",
+      "parentSectionId": "1-0866818a-b983-496b-a346-5bc3bedbd515",
+      "parentSectionDisplayName": "Training",
+      "notebookId": "1-7548d118-fb59-48bd-953a-128455f06983",
+      "pageContent": "\u003Chtml lang=\u0022en-US\u0022\u003E\r\n\t\u003Chead\u003E\r\n\t\t\u003Ctitle\u003EHow to report a hazard\u003C/title\u003E\r\n\t\t\u003Cmeta http-equiv=\u0022Content-Type\u0022 content=\u0022text/html; charset=utf-8\u0022 /\u003E\r\n\t\t\u003Cmeta name=\u0022created\u0022 content=\u00222021-10-31T22:44:00.0000000\u0022 /\u003E\r\n\t\u003C/head\u003E\r\n\t\u003Cbody data-absolute-enabled=\u0022true\u0022 style=\u0022font-family:Calibri;font-size:11pt\u0022\u003E\r\n\t\t\u003Cdiv style=\u0022position:absolute;left:48px;top:114px;width:624px\u0022\u003E\r\n\t\t\t\u003Cp style=\u0022margin-top:0pt;margin-bottom:0pt\u0022\u003E\u003Ca href=\u0022https://vimeo.com/640835684\u0022\u003EHow to Create a Hazard\u003C/a\u003E\u003C/p\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\t\u003Ciframe width=\u0022800\u0022 height=\u0022416\u0022 data-original-src=\u0022https://vimeo.com/640835684\u0022 src=\u0022https://player.vimeo.com/video/640835684?h=42ee6230ec\u0026amp;app_id=122963\u0026autoplay=true\u0022 /\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\u003C/div\u003E\r\n\t\u003C/body\u003E\r\n\u003C/html\u003E\r\n"
+    }
+  ]
+}
