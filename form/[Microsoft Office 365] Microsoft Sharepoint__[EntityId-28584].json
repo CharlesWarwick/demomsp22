@@ -1,0 +1,466 @@
+{
+  "form": {
+    "entityId": 28584,
+    "name": "[Microsoft Office 365] Microsoft Sharepoint",
+    "description": null,
+    "titleFormat": {
+      "format": "[Sharepoint] {1}",
+      "arguments": [
+        "requestType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Microsoft Office 365 \u003E Microsoft Sharepoint",
+        "description": "![Sharepoint](https://cdn2.downdetector.com/static/uploads/logo/SharePoint-logo.png)\n\n### To get started, please fill in the form below and click Submit when you are finished",
+        "identifier": "cj8ops",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "What would you like to do?",
+        "identifier": "requestType",
+        "required": true,
+        "choices": [
+          {
+            "name": "Report Sync issues",
+            "identifier": "syncIssue"
+          },
+          {
+            "name": "Report Microsoft Teams issue",
+            "identifier": "teamIssue"
+          },
+          {
+            "name": "Report Email Issue",
+            "identifier": "emailIssue"
+          },
+          {
+            "name": "Report Multi-factor Authentication Issue",
+            "identifier": "mfaIssue"
+          },
+          {
+            "name": "Request sites and files restoration",
+            "identifier": "restoreSite"
+          },
+          {
+            "name": "Request a new or modified team site",
+            "identifier": "teamSite"
+          },
+          {
+            "name": "Request new or modified permissions",
+            "identifier": "modifyPermission"
+          },
+          {
+            "name": "Request training",
+            "identifier": "trainingSharepoint"
+          },
+          {
+            "name": "Request List or library customization",
+            "identifier": "customization"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [
+      {
+        "name": "Issue",
+        "identifier": "qtveqy",
+        "fields": [
+          {
+            "type": "short_text",
+            "name": "What is the name of the team?",
+            "identifier": "sqnd77",
+            "required": true,
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "teamIssue"
+              ]
+            }
+          },
+          {
+            "type": "email",
+            "name": "What is the email address you are having an issue with?",
+            "identifier": "qnp4ui",
+            "required": true,
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "emailIssue"
+              ]
+            }
+          },
+          {
+            "type": "single_choice",
+            "name": "Did you setup multi-factor authentication yourself?",
+            "identifier": "p6vb0p",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "8yfzjj"
+              },
+              {
+                "name": "No",
+                "identifier": "dvitde"
+              }
+            ],
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "mfaIssue"
+              ]
+            }
+          },
+          {
+            "type": "single_choice",
+            "name": "Do you still have access to the recover code?",
+            "identifier": "xf2gx0",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "ainyqt"
+              },
+              {
+                "name": "No",
+                "identifier": "ajixs2"
+              }
+            ],
+            "condition": {
+              "parentId": "qtveqy",
+              "parentFieldId": "p6vb0p",
+              "operator": "in",
+              "identifiers": [
+                "8yfzjj"
+              ]
+            }
+          },
+          {
+            "type": "single_choice",
+            "name": "How many sites is affected by this site?",
+            "identifier": "akump7",
+            "required": true,
+            "choices": [
+              {
+                "name": "Only one site",
+                "identifier": "i4abe9"
+              },
+              {
+                "name": "A few sites",
+                "identifier": "7e0dj0"
+              },
+              {
+                "name": "All sites",
+                "identifier": "5ktqtp"
+              }
+            ],
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "syncIssue"
+              ]
+            },
+            "meta": {
+              "render": "radio"
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What is the address of this site?",
+            "identifier": "9g98x2",
+            "required": true,
+            "condition": {
+              "parentId": "qtveqy",
+              "parentFieldId": "akump7",
+              "operator": "in",
+              "identifiers": [
+                "i4abe9"
+              ]
+            }
+          },
+          {
+            "type": "single_choice",
+            "name": "How many users is this affected by?",
+            "identifier": "od2sx4",
+            "required": true,
+            "choices": [
+              {
+                "name": "Just me",
+                "identifier": "zzi3m2"
+              },
+              {
+                "name": "Me and some others",
+                "identifier": "3s8wbv",
+                "selected": false
+              },
+              {
+                "name": "Everyone",
+                "identifier": "nzgey4",
+                "selected": false
+              }
+            ]
+          },
+          {
+            "type": "long_text",
+            "name": "Could you please provide more information about this issue?",
+            "identifier": "0esb9z",
+            "required": true
+          },
+          {
+            "type": "file",
+            "name": "Attachments",
+            "description": "If you have any relevant screenshot or attachment, please attachment below",
+            "identifier": "ak4bw6",
+            "required": false
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "syncIssue",
+              "teamIssue",
+              "emailIssue",
+              "mfaIssue"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Request",
+        "identifier": "wy4guc",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Do you want all the training material?",
+            "identifier": "tj1xur",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "58aeni"
+              },
+              {
+                "name": "No",
+                "identifier": "i6dp3z"
+              }
+            ],
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "trainingSharepoint"
+              ]
+            }
+          },
+          {
+            "type": "long_text",
+            "name": "Please specific which training material you would like",
+            "identifier": "6i0uqv",
+            "required": true,
+            "condition": {
+              "parentId": "wy4guc",
+              "parentFieldId": "tj1xur",
+              "operator": "in",
+              "identifiers": [
+                "i6dp3z"
+              ]
+            }
+          },
+          {
+            "type": "single_choice",
+            "name": "What would you like to do?",
+            "identifier": "iwxo0f",
+            "required": true,
+            "choices": [
+              {
+                "name": "Create a new site permission",
+                "identifier": "u37cdg"
+              },
+              {
+                "name": "Modify a site permission",
+                "identifier": "6w3o9u"
+              }
+            ],
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "modifyPermission"
+              ]
+            }
+          },
+          {
+            "type": "single_choice",
+            "name": "What would you like to do?",
+            "identifier": "azsg6l",
+            "required": true,
+            "choices": [
+              {
+                "name": "Create a new site",
+                "identifier": "sb9bwe"
+              },
+              {
+                "name": "Modify an existing site",
+                "identifier": "6e84qa"
+              }
+            ],
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "teamSite"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What is the name of the site?",
+            "identifier": "nme62i",
+            "required": true,
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "restoreSite",
+                "teamSite",
+                "modifyPermission",
+                "customization"
+              ]
+            }
+          },
+          {
+            "type": "long_text",
+            "name": "What list or library modification would you like to make?",
+            "identifier": "hc1vjh",
+            "required": true,
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "customization"
+              ]
+            }
+          },
+          {
+            "type": "long_text",
+            "name": "What permission would you like to modify?",
+            "identifier": "lmjb43",
+            "required": true,
+            "condition": {
+              "parentId": "wy4guc",
+              "parentFieldId": "iwxo0f",
+              "operator": "in",
+              "identifiers": [
+                "6w3o9u"
+              ]
+            }
+          },
+          {
+            "type": "long_text",
+            "name": "What permission would you like to add?",
+            "identifier": "mwbri3",
+            "required": true,
+            "condition": {
+              "parentId": "wy4guc",
+              "parentFieldId": "iwxo0f",
+              "operator": "in",
+              "identifiers": [
+                "u37cdg"
+              ]
+            }
+          },
+          {
+            "type": "long_text",
+            "name": "Who would you like to add to the site?",
+            "description": "If there are multiple users, please list them seperated by semi-colon (;) or new lines. If you have a file, you may also attach it to the attachment below",
+            "identifier": "93qcow",
+            "required": true,
+            "condition": {
+              "parentId": "wy4guc",
+              "parentFieldId": "azsg6l",
+              "operator": "in",
+              "identifiers": [
+                "sb9bwe"
+              ]
+            }
+          },
+          {
+            "type": "long_text",
+            "name": "What would you like to modify?",
+            "identifier": "dt97hm",
+            "required": true,
+            "condition": {
+              "parentId": "wy4guc",
+              "parentFieldId": "azsg6l",
+              "operator": "in",
+              "identifiers": [
+                "6e84qa"
+              ]
+            }
+          },
+          {
+            "type": "long_text",
+            "name": "What is the reason that you want to do this?",
+            "identifier": "svitw8",
+            "required": true,
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "restoreSite",
+                "teamSite",
+                "modifyPermission",
+                "customization"
+              ]
+            }
+          },
+          {
+            "type": "file",
+            "name": "Attachments",
+            "identifier": "z3bj08",
+            "required": false
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "restoreSite",
+              "teamSite",
+              "modifyPermission",
+              "trainingSharepoint",
+              "customization"
+            ]
+          }
+        ]
+      }
+    ],
+    "etag": "01000000-0000-1DD5-0000-000000000311"
+  }
+}
