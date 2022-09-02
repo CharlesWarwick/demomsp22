@@ -1,0 +1,32 @@
+{
+  "general": {
+    "entityId": 5402,
+    "enabled": true,
+    "parentName": "DeploySolution",
+    "name": "Clean up a solution",
+    "tags": [],
+    "parentOptions": [
+      "Account/Access",
+      "DeploySolution",
+      "Hardware",
+      "Microsoft Office 365",
+      "Software"
+    ],
+    "titleTemplate": null,
+    "bodyTemplate": null,
+    "formUrl": null,
+    "formRedirect": null,
+    "ddForm": {
+      "entityId": 37733,
+      "name": "Solution Cleanup"
+    },
+    "taskTemplates": []
+  },
+  "ticket": {},
+  "filter": {
+    "entityId": 5402,
+    "name": "Clean up a solution",
+    "rootFlag": true,
+    "inverseFlagTargets": []
+  }
+}
