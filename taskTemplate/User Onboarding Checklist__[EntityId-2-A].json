@@ -1,0 +1,88 @@
+{
+  "entityId": "2-A",
+  "name": "User Onboarding Checklist",
+  "tags": [],
+  "filter": null,
+  "items": [
+    {
+      "instruction": "Add user account to AD",
+      "description": {
+        "content": "Copy user if access should be the same as another staff member",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Configure the AD account with the Email, Telephone, Fax, Title etc",
+      "description": null
+    },
+    {
+      "instruction": "Configure the Account Attributes (Mail)",
+      "description": null
+    },
+    {
+      "instruction": "Add to correct AD Groups",
+      "description": null
+    },
+    {
+      "instruction": "Assign an Office 365 license to the user account",
+      "description": null
+    },
+    {
+      "instruction": "Enforce MFA",
+      "description": null
+    },
+    {
+      "instruction": "Ensure user has been added to the requested distribution groups",
+      "description": null
+    },
+    {
+      "instruction": "Configure the user on the assigned PC",
+      "description": {
+        "content": "If this is a replacement user on an existing PC, deactivate and reactivate Office with the new user\u0027s 365 login.",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Configure the Outlook profile",
+      "description": {
+        "content": "Configure the default signature within Outlook",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Configure default printer",
+      "description": null
+    },
+    {
+      "instruction": "Confirm network drives are showing/accessible",
+      "description": null
+    },
+    {
+      "instruction": "Add Outlook, Word, Excel shortcuts to Start and Taskbars",
+      "description": {
+        "content": "Confirm all required applications are installed",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Confirm with the end user",
+      "description": {
+        "content": "Confirm that user is happy with current configuration and that all required applications are working correctly - only once this has been confirmed is the request completed.",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "VPN access requirement",
+      "description": null
+    }
+  ],
+  "creator": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  },
+  "lastModifiedAt": "2022-03-24T03:30:32.7213533Z",
+  "lastModifiedBy": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  }
+}
