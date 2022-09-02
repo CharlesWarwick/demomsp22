@@ -1,0 +1,168 @@
+{
+  "form": {
+    "entityId": 28671,
+    "name": "[Hardware] Server",
+    "description": null,
+    "titleFormat": {
+      "format": "[Server] {1}",
+      "arguments": [
+        "requestType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Hardware \u003E Server",
+        "description": "### Please get started by filling in the form below:",
+        "identifier": "8bxjsh",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "What would you like to do?",
+        "identifier": "requestType",
+        "required": true,
+        "choices": [
+          {
+            "name": "Report a server issue",
+            "identifier": "serverIssue"
+          },
+          {
+            "name": "Request new server access",
+            "identifier": "serverAccess"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [
+      {
+        "name": "Issue",
+        "identifier": "b8txe6",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Which server do you have an issue with?",
+            "identifier": "9wjifk",
+            "required": true,
+            "choices": [
+              {
+                "name": "Server 1",
+                "identifier": "rfnexe"
+              },
+              {
+                "name": "Server 2",
+                "identifier": "xe62qf"
+              },
+              {
+                "name": "Server 3",
+                "identifier": "wh17hh"
+              },
+              {
+                "name": "Server 4",
+                "identifier": "ua2e8y"
+              },
+              {
+                "name": "Server 5",
+                "identifier": "6eg3l2"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "What is issue that you are having?",
+            "identifier": "tyf2la",
+            "required": true
+          },
+          {
+            "type": "short_text",
+            "name": "Please provide additional details about the server?",
+            "identifier": "dro4zc",
+            "required": true
+          },
+          {
+            "type": "short_text",
+            "name": "When did the issue first start?",
+            "identifier": "78plka",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "serverIssue"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Access",
+        "identifier": "pvfdb1",
+        "fields": [
+          {
+            "type": "short_text",
+            "name": "What is the server address that you need access to?",
+            "identifier": "35kspz",
+            "required": true
+          },
+          {
+            "type": "single_choice",
+            "name": "Has this server been on for more than 24 hours?",
+            "identifier": "8jg69v",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "ktcrr5"
+              },
+              {
+                "name": "No",
+                "identifier": "8eyif3"
+              }
+            ]
+          },
+          {
+            "type": "single_choice",
+            "name": "Do you need SSH access to the server?",
+            "identifier": "n9iful",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "lv3x9n"
+              },
+              {
+                "name": "No",
+                "identifier": "q089gj"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "Could you please provide further details about the server?",
+            "identifier": "5jo8cq",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "serverAccess"
+            ]
+          }
+        ]
+      }
+    ],
+    "etag": "01000000-0000-1DD5-0000-0000000065A2"
+  }
+}
