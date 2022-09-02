@@ -1,0 +1,18 @@
+{
+  "entityId": "40-A",
+  "name": "Pharmacy",
+  "icon": null,
+  "isInactive": false,
+  "company": {
+    "entityId": 27,
+    "name": "Deed and Viper",
+    "identifier": "deedandviper"
+  },
+  "managers": [],
+  "tags": [],
+  "meta": {
+    "ownerCount": 0,
+    "memberCount": 0,
+    "guestCount": 1
+  }
+}
