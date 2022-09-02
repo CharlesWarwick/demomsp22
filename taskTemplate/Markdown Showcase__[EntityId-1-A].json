@@ -1,0 +1,52 @@
+{
+  "entityId": "1-A",
+  "name": "Markdown Showcase",
+  "tags": [],
+  "filter": null,
+  "items": [
+    {
+      "instruction": "Markdown syntax",
+      "description": {
+        "content": "Supports [basic](https://www.markdownguide.org/basic-syntax/) and [extended](https://www.markdownguide.org/extended-syntax/) syntax.",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Basic markdown",
+      "description": {
+        "content": "## Headers\n\n# This is a Heading h1\n## This is a Heading h2 \n###### This is a Heading h6\n\n## Emphasis\n\n*This text will be italicised*  \n_This will also be italicised_\n\n**This text will be bold**  \n__This will also be bold__\n\n_You **can** combine them_\n\n## Lists\n\n### Unordered\n\n* Item 1\n* Item 2\n  * Item 2a\n  * Item 2b\n\n### Ordered\n\n1. Item 1\n1. Item 2\n    1. Indented\n    1. Indented",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Blockquotes and tables",
+      "description": {
+        "content": "## Blockquotes\n\n\u003E Blockquotes\n\u003E\n\u003E\u003E Nested blockquotes\n\n## Tables\n\n| Left align  | Middle align | Right align |\n| ------------- |:-------------:| -------------: |\n| left foo      | middle foo     | right foo |\n| left bar      | middle bar     | right bar |",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Media",
+      "description": {
+        "content": "## Images\n\n![Image alt text](/images/nonexistent.png \u0022Image title\u0022)\n\n## Links\n\nCheck our our [Knowledge Base](https://help.deskdirector.com/category/zfeu2fiqyt-task-lists).\n\n## Video (Youtube, Vimeo, .mp4)\n![youtube.com](https://youtu.be/LRwZu2RQyd8)",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Inline code and code blocks",
+      "description": {
+        "content": "## Inline code\n\nType \u0060cd ..\u0060 in the terminal to go up one directory.\n\n## Blocks of code\n\n\u0060\u0060\u0060\nlet message = \u0027Hello world\u0027;\nalert(message);\n\u0060\u0060\u0060",
+        "type": "markdown"
+      }
+    }
+  ],
+  "creator": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  },
+  "lastModifiedAt": "2022-03-24T03:30:30.7633825Z",
+  "lastModifiedBy": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  }
+}
