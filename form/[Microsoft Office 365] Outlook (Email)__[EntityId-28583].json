@@ -1,0 +1,585 @@
+{
+  "form": {
+    "entityId": 28583,
+    "name": "[Microsoft Office 365] Outlook (Email)",
+    "description": null,
+    "titleFormat": {
+      "format": "[Outlook] {1}",
+      "arguments": [
+        "requestType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Microsoft Office 365 \u003E Outlook (Email)",
+        "description": "![Outlook](https://deskdirectorfiles.blob.core.windows.net/images/logo/Outlook.png)\n\n### To get started, please select one of the option below and click **Next**",
+        "identifier": "tskvti",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "What would you like to do?",
+        "identifier": "requestType",
+        "required": true,
+        "choices": [
+          {
+            "name": "Request 3rd party add-ins ",
+            "identifier": "addOn"
+          },
+          {
+            "name": "Request a resource mailbox ",
+            "identifier": "resourceMailbox"
+          },
+          {
+            "name": "Request a shared mailbox ",
+            "identifier": "sharedMailbox"
+          },
+          {
+            "name": "Request modified mailbox permissions ",
+            "identifier": "modifiedMailboxPermission"
+          },
+          {
+            "name": "Request an email alias ",
+            "identifier": "emailAlias"
+          },
+          {
+            "name": "Request a distribution list ",
+            "identifier": "distributionList"
+          },
+          {
+            "name": "Request distribution list modifications ",
+            "identifier": "modifiedDistribution"
+          },
+          {
+            "name": "Request to add mail contact ",
+            "identifier": "mailContact"
+          },
+          {
+            "name": "Restoring emails",
+            "identifier": "restoreEmail"
+          },
+          {
+            "name": "Request whitelisting email an address and/or domain",
+            "identifier": "whitelistEmail"
+          },
+          {
+            "name": "Request to block a sender",
+            "identifier": "blockSender"
+          },
+          {
+            "name": "Releasing blocked attachments",
+            "identifier": "releaseBlockAtttachment"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [
+      {
+        "name": "Add-ons",
+        "identifier": "addOn_section",
+        "fields": [
+          {
+            "type": "long_text",
+            "name": "Which email address would you like to install the add-on?",
+            "description": "If there are multiple email address, please list them below separated by semi-colons (;) or new lines",
+            "identifier": "9oo3o6",
+            "required": true
+          },
+          {
+            "type": "multiple_choice",
+            "name": "Which of the following add-on would you like to install?",
+            "identifier": "O2KwFQUI",
+            "required": true,
+            "choices": [
+              {
+                "name": "Add-on Option 1",
+                "identifier": "2CdDfW2i"
+              },
+              {
+                "name": "Add-on Option 2",
+                "identifier": "kiwufx"
+              },
+              {
+                "name": "Add-on Option 3",
+                "identifier": "lhhzq0"
+              },
+              {
+                "name": "Other",
+                "identifier": "te9ffx"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "What is the add-on you would like to install?",
+            "identifier": "7df8hm",
+            "required": false,
+            "condition": {
+              "parentId": "addOn_section",
+              "parentFieldId": "O2KwFQUI",
+              "operator": "equal_to",
+              "identifiers": [
+                "te9ffx"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What is the reason you need this add-on?",
+            "identifier": "yer7ri",
+            "required": true,
+            "condition": {
+              "parentId": "addOn_section",
+              "parentFieldId": "O2KwFQUI",
+              "operator": "contains_any",
+              "identifiers": [
+                "te9ffx"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "addOn"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mailbox Related",
+        "identifier": "mailbox_section",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Have you checked that an existing mailbox has not exist already?",
+            "identifier": "esgmhd",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "sanqzx"
+              },
+              {
+                "name": "No",
+                "identifier": "s0k3i3"
+              }
+            ],
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "resourceMailbox",
+                "sharedMailbox"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What is the name of mailbox you would like to create?",
+            "identifier": "f3nkfx",
+            "required": true,
+            "condition": {
+              "parentId": "mailbox_section",
+              "parentFieldId": "esgmhd",
+              "operator": "in",
+              "identifiers": [
+                "sanqzx"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What changes would you like to make to the permission?",
+            "identifier": "lfw392",
+            "required": true,
+            "condition": {
+              "parentId": "base_section",
+              "parentFieldId": "requestType",
+              "operator": "in",
+              "identifiers": [
+                "modifiedMailboxPermission"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What is the reason that you are making this request?",
+            "identifier": "w4oisu",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "resourceMailbox",
+              "sharedMailbox",
+              "modifiedMailboxPermission"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Email Alias",
+        "identifier": "emailAlias_section",
+        "fields": [
+          {
+            "type": "short_text",
+            "name": "What is the email address that you would like to setup an alias for?",
+            "identifier": "rjq5kw",
+            "required": true
+          },
+          {
+            "type": "short_text",
+            "name": "What would you like the email alias to be?",
+            "identifier": "v5729a",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "emailAlias"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Distriubtion List",
+        "identifier": "distriubtionList_section",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Have you checked that an existing distribution list does not exist already?",
+            "identifier": "xwokvi",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "nv5c3a"
+              },
+              {
+                "name": "No",
+                "identifier": "14eew4"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "What is the name of the email distribution you would like to get?",
+            "identifier": "iftt68",
+            "required": true,
+            "condition": {
+              "parentId": "distriubtionList_section",
+              "parentFieldId": "xwokvi",
+              "operator": "in",
+              "identifiers": [
+                "nv5c3a"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What is the reason for creating this distribution list?",
+            "identifier": "xs6lhk",
+            "required": true,
+            "condition": {
+              "parentId": "distriubtionList_section",
+              "parentFieldId": "xwokvi",
+              "operator": "in",
+              "identifiers": [
+                "nv5c3a"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "Who you like to add to this distribution list?",
+            "description": "Please add emails separated by semi-colon (;) or new lines. \n\nIf you have a file, you may also upload it below",
+            "identifier": "2h4n6u",
+            "required": true,
+            "condition": {
+              "parentId": "distriubtionList_section",
+              "parentFieldId": "xwokvi",
+              "operator": "in",
+              "identifiers": [
+                "nv5c3a"
+              ]
+            }
+          },
+          {
+            "type": "file",
+            "name": "Attachments",
+            "identifier": "qqspbo",
+            "required": false,
+            "condition": {
+              "parentId": "distriubtionList_section",
+              "parentFieldId": "xwokvi",
+              "operator": "in",
+              "identifiers": [
+                "nv5c3a"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "distributionList",
+              "modifiedDistribution"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mailbox Contact",
+        "identifier": "mailContact_section",
+        "fields": [
+          {
+            "type": "short_text",
+            "name": "What is the email address you would like to add the mailbox contact to?",
+            "identifier": "p7mr8h",
+            "required": true
+          },
+          {
+            "type": "long_text",
+            "name": "Please enter the mailbox contact details below:",
+            "identifier": "36gt4g",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "mailContact"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Restore Email",
+        "identifier": "restoreEmail_section",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Was the email deleted?",
+            "identifier": "850ctg",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "noq9ob"
+              },
+              {
+                "name": "No",
+                "identifier": "w2na2b"
+              }
+            ]
+          },
+          {
+            "type": "email",
+            "name": "Who was the sender of the email?",
+            "identifier": "5bj1k1",
+            "required": true
+          },
+          {
+            "type": "email",
+            "name": "Who was the receiver of the email?",
+            "identifier": "1gquel",
+            "required": false
+          },
+          {
+            "type": "short_text",
+            "name": "Could you please provide more information about the email?",
+            "description": "Please provide the subject of the email or any other relevant information",
+            "identifier": "8affih",
+            "required": false
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "restoreEmail"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Whitelist",
+        "identifier": "whitelistEmail_section",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Would you like to whitelist a specific email domain?",
+            "identifier": "d5f3hm",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "bg7rkw"
+              },
+              {
+                "name": "No",
+                "identifier": "b6brv4"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "What is the email domain you would like to whitelist?",
+            "identifier": "4qjarh",
+            "required": true,
+            "condition": {
+              "parentId": "whitelistEmail_section",
+              "parentFieldId": "d5f3hm",
+              "operator": "in",
+              "identifiers": [
+                "bg7rkw"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What is the email domains you would like to whitelist?",
+            "description": "Please enter a list of domains separated by semi-colon (;) or by new lines",
+            "identifier": "hl4lpk",
+            "required": true,
+            "condition": {
+              "parentId": "whitelistEmail_section",
+              "parentFieldId": "d5f3hm",
+              "operator": "in",
+              "identifiers": [
+                "b6brv4"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "whitelistEmail"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Blocklist",
+        "identifier": "blockSender_section",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "Would you like to blacklist a specific email domain?",
+            "identifier": "6yigjy",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "axfgpy"
+              },
+              {
+                "name": "No",
+                "identifier": "gpjphj"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "What is the email domain you would like to blacklist?",
+            "identifier": "opwc8j",
+            "required": true,
+            "condition": {
+              "parentId": "blockSender_section",
+              "parentFieldId": "6yigjy",
+              "operator": "in",
+              "identifiers": [
+                "axfgpy"
+              ]
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "What is the email domains you would like to blacklist?",
+            "description": "Please enter a list of domains separated by semi-colon (;) or by new lines",
+            "identifier": "16jfxu",
+            "required": true,
+            "condition": {
+              "parentId": "blockSender_section",
+              "parentFieldId": "6yigjy",
+              "operator": "in",
+              "identifiers": [
+                "gpjphj"
+              ]
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "blockSender"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Blocked Attachment",
+        "identifier": "releaseBlockAtttachment_section",
+        "fields": [
+          {
+            "type": "short_text",
+            "name": "What attachment would you like to unblock?",
+            "identifier": "ph9tkl",
+            "required": true
+          },
+          {
+            "type": "short_text",
+            "name": "Could you please provide more information about the attachment?",
+            "identifier": "yezgkh",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "releaseBlockAtttachment"
+            ]
+          }
+        ]
+      }
+    ],
+    "etag": "01000000-0000-1DD5-0000-00000000030F"
+  }
+}
