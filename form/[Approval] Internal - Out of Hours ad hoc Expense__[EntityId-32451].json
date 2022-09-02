@@ -1,0 +1,38 @@
+{
+  "form": {
+    "entityId": 32451,
+    "name": "[Approval] Internal - Out of Hours ad hoc Expense",
+    "description": "Internal form to be sent to get approvals on extra job requests that are not covered under SLA.",
+    "titleFormat": null,
+    "tags": [
+      "approval"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "You are receiving this approval form because someone in your company has requested a job that is not included in your SLA. Please approve or decline accordingly.",
+        "identifier": "fvj971",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "Do you approve the expense?",
+        "identifier": "c845vs",
+        "required": true,
+        "choices": [
+          {
+            "name": "Yes",
+            "identifier": "g5jzfs"
+          },
+          {
+            "name": "No",
+            "identifier": "f0eqqj"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [],
+    "etag": "01000000-0000-1DE7-0000-000000001FDA"
+  }
+}
