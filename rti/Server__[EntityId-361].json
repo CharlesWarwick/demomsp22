@@ -1,0 +1,36 @@
+{
+  "general": {
+    "entityId": 361,
+    "enabled": true,
+    "parentName": "Hardware",
+    "name": "Server",
+    "tags": [
+      "hardware",
+      "sc-general",
+      "flow-automation"
+    ],
+    "parentOptions": [
+      "Account/Access",
+      "DeploySolution",
+      "Hardware",
+      "Microsoft Office 365",
+      "Software"
+    ],
+    "titleTemplate": null,
+    "bodyTemplate": null,
+    "formUrl": null,
+    "formRedirect": null,
+    "ddForm": {
+      "entityId": 28580,
+      "name": null
+    },
+    "taskTemplates": []
+  },
+  "ticket": {},
+  "filter": {
+    "entityId": 361,
+    "name": "Server",
+    "rootFlag": true,
+    "inverseFlagTargets": []
+  }
+}
