@@ -1,0 +1,53 @@
+{
+  "entityId": "4-A",
+  "name": "P1 Ticket Checklist",
+  "tags": [],
+  "filter": null,
+  "items": [
+    {
+      "instruction": "P1 Response Chat Group Created",
+      "description": {
+        "content": "Name the chat \u0022P1 - \u003Cclient name\u003E - Issue/Ticket#\n\nCreate with the following members:\n- SDM\n- Dispatch\n- CSM\n- General Manager\n- Assigned Engineer (the engineer who first responded to the issue, or the engineer who this P1 ticket is assigned to)\n- Primary Technical Engineer (ideally the Primary Senior engineer (T3) for the client. If unavailable, a T3 available, familiar with the issue and able to support)",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Customer liaison advised of issue and communication strategy",
+      "description": {
+        "content": "Reach out to the primary customer contact, or the person who logged the ticket to ensure they are aware:\n- We are working on the issue\n- What our communication timeline will be\n- Gather if any other contacts need to be included in comms",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Engineer workload cleared",
+      "description": {
+        "content": "- The assigned engineer will need their workload cleared to ensure they are able to focus on this issue\n- Dispatch should review their schedule and either:\n    -  Move the tickets to another engineer\n    -  Or reschedule the tasks\n    -  Or advise SDM that the assigned engineer may not be the best resource to work this P1",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "[Completion] Impacted users have been contacted and confirmed working OK",
+      "description": null
+    },
+    {
+      "instruction": "[Completion] Incident report has been filled out and checked off by Account Management",
+      "description": {
+        "content": "Once the issue is resolved, an incident report is created, detailing the following:\n- What went wrong\n- Root cause analysis\n- What learnings to ensure it doesn\u0027t happen again\n- What services/product recommendations\n- What changes are required\n- How could we minimise this in the future\n\nThe incident report must be submitted **within 24 hours** after the incident",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "[Completion] Any relevant preventative tickets have been logged",
+      "description": null
+    }
+  ],
+  "creator": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  },
+  "lastModifiedAt": "2022-03-24T03:30:35.1772532Z",
+  "lastModifiedBy": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  }
+}
