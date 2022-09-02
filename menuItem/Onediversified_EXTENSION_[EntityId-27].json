@@ -1,0 +1,19 @@
+{
+  "entityId": "27",
+  "type": "extension",
+  "name": "Onediversified",
+  "icon": "account_balance",
+  "tags": [],
+  "canReset": false,
+  "webContent": {
+    "url": "https://prod-14.australiasoutheast.logic.azure.com:443/workflows/d4003270cd19488cb1b2845908cd6618/triggers/manual/paths/invoke?api-version=2016-06-01\u0026sp=%2Ftriggers%2Fmanual%2Frun\u0026sv=1.0\u0026sig=DdCevfsJXLnJ0-hvjcNTsQMwR2bZJgkRRzlKCBohnR0",
+    "enableSandbox": false,
+    "sandboxAttributes": [
+      "allow-same-origin",
+      "allow-scripts"
+    ],
+    "queryParameters": [
+      "company_entity_id"
+    ]
+  }
+}
