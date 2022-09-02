@@ -1,0 +1,36 @@
+{
+  "general": {
+    "entityId": 374,
+    "enabled": true,
+    "parentName": "Microsoft Office 365",
+    "name": "Microsoft Sharepoint",
+    "tags": [
+      "software",
+      "sc-general",
+      "flow-automation"
+    ],
+    "parentOptions": [
+      "Account/Access",
+      "DeploySolution",
+      "Hardware",
+      "Microsoft Office 365",
+      "Software"
+    ],
+    "titleTemplate": null,
+    "bodyTemplate": null,
+    "formUrl": null,
+    "formRedirect": null,
+    "ddForm": {
+      "entityId": 28675,
+      "name": null
+    },
+    "taskTemplates": []
+  },
+  "ticket": {},
+  "filter": {
+    "entityId": 374,
+    "name": "Microsoft Sharepoint",
+    "rootFlag": true,
+    "inverseFlagTargets": []
+  }
+}
