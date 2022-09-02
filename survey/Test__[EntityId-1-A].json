@@ -1,0 +1,15 @@
+{
+  "entityId": "1-A",
+  "name": "Test",
+  "tags": [],
+  "enabled": false,
+  "items": [],
+  "deletedItems": [],
+  "alerts": {
+    "onNegative": null
+  },
+  "meta": {
+    "updatedAt": "0001-01-01T00:00:00",
+    "updatedBy": null
+  }
+}
