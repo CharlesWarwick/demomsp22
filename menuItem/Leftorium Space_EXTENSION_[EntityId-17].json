@@ -1,0 +1,14 @@
+{
+  "entityId": "17",
+  "type": "extension",
+  "name": "Leftorium Space",
+  "icon": "home",
+  "tags": [],
+  "canReset": false,
+  "webContent": {
+    "url": "https://simpsons.fandom.com/wiki/The_Leftorium",
+    "enableSandbox": false,
+    "sandboxAttributes": [],
+    "queryParameters": []
+  }
+}
