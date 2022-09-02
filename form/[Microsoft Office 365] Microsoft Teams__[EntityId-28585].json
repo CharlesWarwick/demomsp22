@@ -1,0 +1,212 @@
+{
+  "form": {
+    "entityId": 28585,
+    "name": "[Microsoft Office 365] Microsoft Teams",
+    "description": null,
+    "titleFormat": {
+      "format": "[Microsoft Teams] {1}",
+      "arguments": [
+        "requestType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Microsoft Office 365 \u003E Microsoft Teams",
+        "description": "![Microsoft Teams](https://logos-world.net/wp-content/uploads/2021/04/Microsoft-Teams-Emblem.png)\n\n### To get started, please fill in the form below and click Submit when you are finished",
+        "identifier": "icgz0b",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "What would you like to do?",
+        "identifier": "requestType",
+        "required": true,
+        "choices": [
+          {
+            "name": "Request a team",
+            "identifier": "newTeam"
+          },
+          {
+            "name": "Request a channel",
+            "identifier": "newChannel"
+          },
+          {
+            "name": "Request mail enabling a team",
+            "identifier": "enableMail"
+          },
+          {
+            "name": "Request team ownership transfer (Requires approval)",
+            "identifier": "transferOwnership"
+          },
+          {
+            "name": "Request new or modified permissions (Requires approval)",
+            "identifier": "modifyPermission"
+          },
+          {
+            "name": "Request training",
+            "identifier": "trainingTeams"
+          },
+          {
+            "name": "Request connections to 3rd party applications",
+            "identifier": "addonsTeams"
+          }
+        ]
+      },
+      {
+        "type": "short_text",
+        "name": "What is the name of your team?",
+        "description": "If you are creating a new Team, please enter the name you would like here",
+        "identifier": "hm31fi",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "newTeam",
+            "newChannel",
+            "enableMail",
+            "transferOwnership",
+            "modifyPermission",
+            "addonsTeams"
+          ]
+        }
+      },
+      {
+        "type": "long_text",
+        "name": "What would you like to name your channel?",
+        "description": "If you are creating multiple channel, please seperate each channel by new lines",
+        "identifier": "emadly",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "newTeam",
+            "newChannel"
+          ]
+        }
+      },
+      {
+        "type": "long_text",
+        "name": "Please list down the users you would to add",
+        "description": "All users listed here will be added upon creation to your new teams/channel",
+        "identifier": "qndsut",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "newTeam",
+            "newChannel"
+          ]
+        }
+      },
+      {
+        "type": "short_text",
+        "name": "Who would you like to transfer your team ownership to?",
+        "identifier": "ywjiam",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "transferOwnership"
+          ]
+        }
+      },
+      {
+        "type": "long_text",
+        "name": "What changes would you like to make to your permission?",
+        "description": "Please describe any changes that you would like to make to your Teams? \nYou change add or modify existing permission as well.\n\nIf you have admin permission, you may also do this yourself.\n[Modifying Permission](https://support.microsoft.com/en-us/office/manage-team-settings-and-permissions-in-teams-ce053b04-1b8e-4796-baa8-90dc427b3acc)",
+        "identifier": "nlboc0",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "modifyPermission"
+          ]
+        }
+      },
+      {
+        "type": "statement",
+        "name": "Quick Help",
+        "description": "\u003E Here\u0027s some helpful link if you wish to learn more about Microsoft Teams\n\u003E - [Getting Started](https://support.microsoft.com/en-us/office/video-what-is-microsoft-teams-422bf3aa-9ae8-46f1-83a2-e65720e1a34d)\n\u003E - [Setting up mobile app](https://support.microsoft.com/en-us/office/set-up-your-teams-mobile-apps-1ba8dce3-1122-47f4-8db6-00a4f93117e8)",
+        "identifier": "j00t5i",
+        "required": false,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "trainingTeams"
+          ]
+        }
+      },
+      {
+        "type": "long_text",
+        "name": "What 3rd party applications would you like to add to your Teams?",
+        "identifier": "3akws9",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "addonsTeams"
+          ]
+        }
+      },
+      {
+        "type": "long_text",
+        "name": "Please describe the reason you would like to make this change",
+        "identifier": "xiy8it",
+        "required": true,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "transferOwnership",
+            "modifyPermission",
+            "addonsTeams"
+          ]
+        }
+      },
+      {
+        "type": "long_text",
+        "name": "Additional Notes (Optional)",
+        "description": "If there is something we should know that is not covered in the form, please describe it below",
+        "identifier": "sd1vb1",
+        "required": false,
+        "condition": {
+          "parentId": "base_section",
+          "parentFieldId": "requestType",
+          "operator": "in",
+          "identifiers": [
+            "newTeam",
+            "newChannel",
+            "enableMail",
+            "transferOwnership",
+            "modifyPermission",
+            "trainingTeams",
+            "addonsTeams"
+          ]
+        }
+      }
+    ],
+    "readonly": false,
+    "sections": [],
+    "etag": "01000000-0000-1DD5-0000-000000000313"
+  }
+}
