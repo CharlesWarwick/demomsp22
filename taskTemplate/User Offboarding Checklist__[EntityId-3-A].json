@@ -1,0 +1,64 @@
+{
+  "entityId": "3-A",
+  "name": "User Offboarding Checklist",
+  "tags": [],
+  "filter": null,
+  "items": [
+    {
+      "instruction": "Reset user password",
+      "description": null
+    },
+    {
+      "instruction": "Remove Office 365 license from the user",
+      "description": null
+    },
+    {
+      "instruction": "Ensure mailbox has been removed from all distribution groups",
+      "description": null
+    },
+    {
+      "instruction": "Setup auto response (ensure you include the logo) on departing user\u0027s email account with forwarding contact details",
+      "description": null
+    },
+    {
+      "instruction": "Remove user from all distribution groups",
+      "description": null
+    },
+    {
+      "instruction": "Move user\u0027s home folder to ex staff folder",
+      "description": null
+    },
+    {
+      "instruction": "Change Network Access Permission to Deny Access",
+      "description": {
+        "content": "Disables VPN access",
+        "type": "markdown"
+      }
+    },
+    {
+      "instruction": "Deactivate contact in PSA",
+      "description": null
+    },
+    {
+      "instruction": "Schedule yourself in 4 weeks to remove the auto response",
+      "description": null
+    },
+    {
+      "instruction": "Remove alias from mailbox so that it bounces",
+      "description": null
+    },
+    {
+      "instruction": "Ticket can be closed once alias is removed and mail bounces",
+      "description": null
+    }
+  ],
+  "creator": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  },
+  "lastModifiedAt": "2022-03-24T03:30:33.9243215Z",
+  "lastModifiedBy": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  }
+}
