@@ -1,0 +1,43 @@
+{
+  "form": {
+    "entityId": 31635,
+    "name": "TestForm",
+    "description": null,
+    "titleFormat": null,
+    "tags": [],
+    "fields": [
+      {
+        "type": "date",
+        "name": "Please enter your date range",
+        "identifier": "dd-booking-startdate",
+        "required": false,
+        "meta": {
+          "render": "date"
+        }
+      },
+      {
+        "type": "date",
+        "name": "Please enter your end date range",
+        "identifier": "dd-booking-enddate",
+        "required": false,
+        "meta": {
+          "render": "date"
+        }
+      },
+      {
+        "type": "api_single_select",
+        "name": "New question title, please modify this.",
+        "identifier": "6833cb",
+        "required": false,
+        "api": {
+          "method": "GET",
+          "url": "https://www.google.com/test?dd-booking-startdate\u0026dd-booking-enddate",
+          "queryParams": null
+        }
+      }
+    ],
+    "readonly": false,
+    "sections": [],
+    "etag": "01000000-0000-1DE4-0000-00000000A423"
+  }
+}
