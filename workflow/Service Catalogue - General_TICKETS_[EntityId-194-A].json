@@ -1,0 +1,121 @@
+{
+  "entityId": "194-A",
+  "name": "Service Catalogue - General",
+  "type": "tickets",
+  "state": "enabled",
+  "source": "custom",
+  "trigger": {
+    "name": "Tickets",
+    "type": "tickets",
+    "events": [
+      "ticket.new"
+    ],
+    "conditions": [
+      {
+        "field": "ticket_form_id",
+        "operator": "equals_to_any_of",
+        "options": {
+          "integerEntities": [
+            {
+              "entityId": 28581,
+              "name": "[Hardware] General"
+            },
+            {
+              "entityId": 28672,
+              "name": "[Hardware] General"
+            },
+            {
+              "entityId": 28578,
+              "name": "[Hardware] Printers/Scanner"
+            },
+            {
+              "entityId": 28669,
+              "name": "[Hardware] Printers/Scanner"
+            },
+            {
+              "entityId": 28580,
+              "name": "[Hardware] Server"
+            },
+            {
+              "entityId": 28671,
+              "name": "[Hardware] Server"
+            },
+            {
+              "entityId": 28579,
+              "name": "[Hardware] WiFi"
+            },
+            {
+              "entityId": 28670,
+              "name": "[Hardware] WiFi"
+            },
+            {
+              "entityId": 28584,
+              "name": "[Microsoft Office 365] Microsoft Sharepoint"
+            },
+            {
+              "entityId": 28675,
+              "name": "[Microsoft Office 365] Microsoft Sharepoint"
+            },
+            {
+              "entityId": 28585,
+              "name": "[Microsoft Office 365] Microsoft Teams"
+            },
+            {
+              "entityId": 28676,
+              "name": "[Microsoft Office 365] Microsoft Teams"
+            },
+            {
+              "entityId": 28586,
+              "name": "[Microsoft Office 365] Multi-factor Authentication Setup"
+            },
+            {
+              "entityId": 28677,
+              "name": "[Microsoft Office 365] Multi-factor Authentication Setup"
+            },
+            {
+              "entityId": 28583,
+              "name": "[Microsoft Office 365] Outlook (Email)"
+            },
+            {
+              "entityId": 28674,
+              "name": "[Microsoft Office 365] Outlook (Email)"
+            },
+            {
+              "entityId": 28582,
+              "name": "[Software] Request a new software install"
+            },
+            {
+              "entityId": 28673,
+              "name": "[Software] Request a new software install"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "actions": [
+    {
+      "entityId": "166-A",
+      "name": "Dynamic Service Catalogue - General",
+      "type": "send_webhook",
+      "state": "enabled",
+      "source": "flow",
+      "webhook": {
+        "url": "https://prod-02.australiasoutheast.logic.azure.com/workflows/2d9dd930a923442796f7d131b280edd7/triggers/When_a_workflow_is_triggered/versions/08585594861785731052/run?api-version=2016-06-01\u0026sp=%2Ftriggers%2FWhen_a_workflow_is_triggered%2Fversions%2F08585594861785731052%2Frun%2C%2Ftriggers%2FWhen_a_workflow_is_triggered%2Fversions%2F08585594861785731052%2Fread\u0026sv=1.0\u0026sig=GJS04fIPQ7E45yCaqIyq9hX6jHrZbWKdds-c3KHhNHQ"
+      },
+      "info": {
+        "x-ms-workflow-name": "73ba52c5-06ea-fa50-172d-f5d638b3836c",
+        "x-ms-workflow-operation-name": "When_a_workflow_is_triggered"
+      }
+    }
+  ],
+  "settings": {
+    "webhookSecret": "wfLQFlPrhz7sqj8iZmW3i3CgR3us3RQM"
+  },
+  "createdAt": "2022-01-14T00:16:23.3504091Z",
+  "lastModifiedAt": "2022-01-14T00:38:27.5844924Z",
+  "lastModifiedBy": {
+    "entityId": "l_api_key.static",
+    "name": "Power Automate"
+  }
+}
