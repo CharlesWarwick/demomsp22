@@ -1,0 +1,17 @@
+{
+  "entityId": "21",
+  "type": "extension",
+  "name": "Menu Extension Reference",
+  "icon": "3d_rotation",
+  "tags": [],
+  "canReset": false,
+  "webContent": {
+    "url": "https://extension-reference.deskdirector.com?priority_1_id=2\u0026priority_2_id=3\u0026priority_3_id=4\u0026twitter_handle=deskdirector\u0026show_configs=false\u0026show_quotes=false\u0026show_projects=false",
+    "enableSandbox": false,
+    "sandboxAttributes": [],
+    "queryParameters": [
+      "access_token",
+      "raven_name"
+    ]
+  }
+}
