@@ -1,0 +1,49 @@
+{
+  "entityId": "7-A",
+  "name": "Preventive Maintenance - Server General",
+  "tags": [],
+  "filter": null,
+  "items": [
+    {
+      "instruction": "Review Microsoft updates are installing",
+      "description": null
+    },
+    {
+      "instruction": "Ensure all services set to automatic are running",
+      "description": null
+    },
+    {
+      "instruction": "Check Event Logs (Directory Service, DNS, Replication, System)",
+      "description": null
+    },
+    {
+      "instruction": "Review Critical Errors",
+      "description": null
+    },
+    {
+      "instruction": "Review Warnings",
+      "description": null
+    },
+    {
+      "instruction": "Review dcdiag",
+      "description": null
+    },
+    {
+      "instruction": "Document corrective actions",
+      "description": null
+    },
+    {
+      "instruction": "Review LabTech monitoring",
+      "description": null
+    }
+  ],
+  "creator": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  },
+  "lastModifiedAt": "2022-03-24T03:30:38.977226Z",
+  "lastModifiedBy": {
+    "entityId": "l_api_key.static",
+    "name": "API Key"
+  }
+}
