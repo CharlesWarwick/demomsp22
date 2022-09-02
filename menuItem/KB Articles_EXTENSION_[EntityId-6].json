@@ -1,0 +1,14 @@
+{
+  "entityId": "6",
+  "type": "extension",
+  "name": "KB Articles",
+  "icon": "book",
+  "tags": [],
+  "canReset": false,
+  "webContent": {
+    "url": "https://help.deskdirector.com/",
+    "enableSandbox": false,
+    "sandboxAttributes": [],
+    "queryParameters": []
+  }
+}
