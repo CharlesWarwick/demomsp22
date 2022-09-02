@@ -1,0 +1,14 @@
+{
+  "entityId": "16",
+  "type": "extension",
+  "name": "Krusty App",
+  "icon": "apps",
+  "tags": [],
+  "canReset": false,
+  "webContent": {
+    "url": "https://clownopedia.fandom.com/wiki/Krusty",
+    "enableSandbox": false,
+    "sandboxAttributes": [],
+    "queryParameters": []
+  }
+}
