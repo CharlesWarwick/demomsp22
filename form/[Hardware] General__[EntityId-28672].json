@@ -1,0 +1,405 @@
+{
+  "form": {
+    "entityId": 28672,
+    "name": "[Hardware] General",
+    "description": null,
+    "titleFormat": {
+      "format": "[General Hardware] {1}",
+      "arguments": [
+        "requestType"
+      ]
+    },
+    "tags": [
+      "sc-general",
+      "flow-automation"
+    ],
+    "fields": [
+      {
+        "type": "statement",
+        "name": "Service Catalogue \u003E Hardware \u003E General",
+        "description": "### Please get started by filling in the form below:",
+        "identifier": "9hon9k",
+        "required": false
+      },
+      {
+        "type": "single_choice",
+        "name": "What would you like to do?",
+        "identifier": "requestType",
+        "required": true,
+        "choices": [
+          {
+            "name": "Report issue with remote or desktop device",
+            "identifier": "remoteIssue"
+          },
+          {
+            "name": "Report stolen/lost device",
+            "identifier": "stolenDevice"
+          },
+          {
+            "name": "Request Standard Hardware",
+            "identifier": "stdHardware"
+          },
+          {
+            "name": "Request Non-Standard Hardware",
+            "identifier": "nonStdHardware"
+          }
+        ]
+      }
+    ],
+    "readonly": false,
+    "sections": [
+      {
+        "name": "Issue with Devices",
+        "identifier": "remoteIssue_section",
+        "fields": [
+          {
+            "type": "single_choice",
+            "name": "What kind of device do you have an issue with?",
+            "identifier": "35t2ov",
+            "required": true,
+            "choices": [
+              {
+                "name": "Monitor",
+                "identifier": "a8lr0g"
+              },
+              {
+                "name": "Desktop",
+                "identifier": "51pr4x"
+              },
+              {
+                "name": "Laptop",
+                "identifier": "6iin89"
+              },
+              {
+                "name": "Phone",
+                "identifier": "qkqm2l"
+              },
+              {
+                "name": "Printer",
+                "identifier": "3xk57n"
+              },
+              {
+                "name": "Scanner",
+                "identifier": "glvenc"
+              },
+              {
+                "name": "Switch",
+                "identifier": "ua58a2"
+              },
+              {
+                "name": "Router",
+                "identifier": "igg7qo"
+              },
+              {
+                "name": "WiFi",
+                "identifier": "qo669r"
+              },
+              {
+                "name": "Other",
+                "identifier": "6c6cyp"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "Please specific the device you have an issue with:",
+            "identifier": "4q39k1",
+            "required": true,
+            "condition": {
+              "parentId": "remoteIssue_section",
+              "parentFieldId": "35t2ov",
+              "operator": "in",
+              "identifiers": [
+                "6c6cyp"
+              ]
+            }
+          },
+          {
+            "type": "single_choice",
+            "name": "How many users are affected by this issue?",
+            "identifier": "affectedUsers",
+            "required": true,
+            "choices": [
+              {
+                "name": "Just me",
+                "identifier": "1b5y0u"
+              },
+              {
+                "name": "Me and some others",
+                "identifier": "os23u8"
+              },
+              {
+                "name": "Everyone",
+                "identifier": "cixt9l"
+              }
+            ],
+            "meta": {
+              "render": "radio"
+            }
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "remoteIssue"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Stolen Device",
+        "identifier": "stolenDevice_section",
+        "fields": [
+          {
+            "type": "multiple_choice",
+            "name": "What kind of device was stolen?",
+            "identifier": "jzc740",
+            "required": true,
+            "choices": [
+              {
+                "name": "Monitor",
+                "identifier": "y8pcwa"
+              },
+              {
+                "name": "Desktop",
+                "identifier": "3rkma9"
+              },
+              {
+                "name": "Laptop",
+                "identifier": "st27rr"
+              },
+              {
+                "name": "Phone",
+                "identifier": "vpdkcy"
+              },
+              {
+                "name": "Printer",
+                "identifier": "0htcn5"
+              },
+              {
+                "name": "Scanner",
+                "identifier": "u91qpd"
+              },
+              {
+                "name": "Switch",
+                "identifier": "bskqdk"
+              },
+              {
+                "name": "Router",
+                "identifier": "pdbwfo"
+              },
+              {
+                "name": "WiFi",
+                "identifier": "1pk1rb"
+              }
+            ]
+          },
+          {
+            "type": "short_text",
+            "name": "Please specific any other devices that was stolen not included in the list above:",
+            "identifier": "pntyfu",
+            "required": false
+          },
+          {
+            "type": "long_text",
+            "name": "Could you please describe what had happen?",
+            "identifier": "w4ekn1",
+            "required": true
+          },
+          {
+            "type": "date",
+            "name": "When did you realise that the device was stolen?",
+            "identifier": "soyw06",
+            "required": true
+          },
+          {
+            "type": "single_choice",
+            "name": "How many people are affected by this?",
+            "description": "Has any of your co-workers also had any device stolen or is missing",
+            "identifier": "36oq8k",
+            "required": true,
+            "choices": [
+              {
+                "name": "Just me",
+                "identifier": "gs9jz9"
+              },
+              {
+                "name": "Me and some others",
+                "identifier": "7hgxit"
+              },
+              {
+                "name": "Everyone",
+                "identifier": "aci7sb"
+              }
+            ]
+          },
+          {
+            "type": "single_choice",
+            "name": "Will you require a replacement device?",
+            "identifier": "pn0c2f",
+            "required": true,
+            "choices": [
+              {
+                "name": "Yes",
+                "identifier": "bx3iia"
+              },
+              {
+                "name": "No",
+                "identifier": "tica2j"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "stolenDevice"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "New Standard Hardware",
+        "identifier": "stdHardware_section",
+        "fields": [
+          {
+            "type": "multiple_choice",
+            "name": "Which new standard hardware would you like?",
+            "identifier": "11ehto",
+            "required": true,
+            "choices": [
+              {
+                "name": "Monitor",
+                "identifier": "qmvpvc"
+              },
+              {
+                "name": "Desktop",
+                "identifier": "xwpbqe"
+              },
+              {
+                "name": "Laptop",
+                "identifier": "llvicu"
+              },
+              {
+                "name": "Phone",
+                "identifier": "63oxna"
+              },
+              {
+                "name": "Printer",
+                "identifier": "tewa1j"
+              },
+              {
+                "name": "Scanner",
+                "identifier": "zfcxgv"
+              },
+              {
+                "name": "Switch",
+                "identifier": "3ivyys"
+              },
+              {
+                "name": "Router",
+                "identifier": "opof3p"
+              },
+              {
+                "name": "WiFi",
+                "identifier": "4yq8t9"
+              }
+            ]
+          },
+          {
+            "type": "single_choice",
+            "name": "How many users would you require this?",
+            "identifier": "i3wbeo",
+            "required": true,
+            "choices": [
+              {
+                "name": "Just me",
+                "identifier": "9h3x36"
+              },
+              {
+                "name": "Me and some others",
+                "identifier": "eesrgh"
+              },
+              {
+                "name": "Everyone",
+                "identifier": "leg8lg"
+              }
+            ],
+            "meta": {
+              "render": "radio"
+            }
+          },
+          {
+            "type": "short_text",
+            "name": "Where would you like these devices installed?",
+            "identifier": "xobhbd",
+            "required": true
+          },
+          {
+            "type": "date",
+            "name": "When is the best date to complete the install?",
+            "identifier": "dsy9gq",
+            "required": true
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "stdHardware"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "New Non-Standard Hardware",
+        "identifier": "nonStdHardware_section",
+        "fields": [
+          {
+            "type": "long_text",
+            "name": "Could you please provide us with further information about this hardware?",
+            "identifier": "t0p42m",
+            "required": false
+          },
+          {
+            "type": "long_text",
+            "name": "What is the reason that you require this?",
+            "identifier": "yyo14b",
+            "required": true
+          },
+          {
+            "type": "long_text",
+            "name": "Where would you like this hardware install?",
+            "identifier": "6wvs7b",
+            "required": true
+          },
+          {
+            "type": "date",
+            "name": "When do you need this hardware install?",
+            "identifier": "da9vpa",
+            "required": false
+          }
+        ],
+        "conditions": [
+          {
+            "parentId": "base_section",
+            "parentFieldId": "requestType",
+            "operator": "in",
+            "identifiers": [
+              "nonStdHardware"
+            ]
+          }
+        ]
+      }
+    ],
+    "etag": "01000000-0000-1DD5-0000-0000000065A4"
+  }
+}
