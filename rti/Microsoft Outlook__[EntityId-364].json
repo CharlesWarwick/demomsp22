@@ -1,0 +1,36 @@
+{
+  "general": {
+    "entityId": 364,
+    "enabled": true,
+    "parentName": "Microsoft Office 365",
+    "name": "Microsoft Outlook",
+    "tags": [
+      "software",
+      "sc-general",
+      "flow-automation"
+    ],
+    "parentOptions": [
+      "Account/Access",
+      "DeploySolution",
+      "Hardware",
+      "Microsoft Office 365",
+      "Software"
+    ],
+    "titleTemplate": null,
+    "bodyTemplate": null,
+    "formUrl": null,
+    "formRedirect": null,
+    "ddForm": {
+      "entityId": 28583,
+      "name": null
+    },
+    "taskTemplates": []
+  },
+  "ticket": {},
+  "filter": {
+    "entityId": 364,
+    "name": "Microsoft Outlook",
+    "rootFlag": true,
+    "inverseFlagTargets": []
+  }
+}
