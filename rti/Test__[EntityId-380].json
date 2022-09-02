@@ -1,0 +1,32 @@
+{
+  "general": {
+    "entityId": 380,
+    "enabled": true,
+    "parentName": null,
+    "name": "Test",
+    "tags": [],
+    "parentOptions": [
+      "Account/Access",
+      "DeploySolution",
+      "Hardware",
+      "Microsoft Office 365",
+      "Software"
+    ],
+    "titleTemplate": null,
+    "bodyTemplate": null,
+    "formUrl": null,
+    "formRedirect": null,
+    "ddForm": {
+      "entityId": 31635,
+      "name": "TestForm"
+    },
+    "taskTemplates": []
+  },
+  "ticket": {},
+  "filter": {
+    "entityId": 380,
+    "name": "Test",
+    "rootFlag": true,
+    "inverseFlagTargets": []
+  }
+}
