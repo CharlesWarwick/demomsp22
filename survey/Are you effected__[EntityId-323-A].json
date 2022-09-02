@@ -1,0 +1,25 @@
+{
+  "entityId": "323-A",
+  "name": "Are you effected",
+  "tags": [
+    "sln-demomsp9-dskdir-v0-0-2",
+    "08-08-2022"
+  ],
+  "enabled": false,
+  "items": [],
+  "deletedItems": [],
+  "alerts": {
+    "onNegative": {
+      "emails": [
+        "jurgen@ddportal.com"
+      ]
+    }
+  },
+  "meta": {
+    "updatedAt": "2022-08-08T23:50:25.4900534Z",
+    "updatedBy": {
+      "entityId": "l_api_key.static",
+      "name": "API Key"
+    }
+  }
+}
