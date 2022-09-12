@@ -21,6 +21,12 @@
         "required": true
       },
       {
+        "type": "short_text",
+        "name": "Instance API Key",
+        "identifier": "hostapikey",
+        "required": true
+      },
+      {
         "type": "url",
         "name": "Github Repo",
         "identifier": "sourcerepo",
@@ -43,6 +49,6 @@
     "readonly": false,
     "sections": [],
     "webhook": "https://prod-15.australiasoutheast.logic.azure.com:443/workflows/84beebfcad054d8197425556b3711f02/triggers/manual/paths/invoke?api-version=2016-06-01\u0026sp=%2Ftriggers%2Fmanual%2Frun\u0026sv=1.0\u0026sig=9cIJ5wiTIrEjNzzx0n0WlsLycZdlpzE4bhfQfQHzuzw",
-    "etag": "01000000-0000-1DE8-0000-000000014B37"
+    "etag": "01000000-0000-1DEA-0000-00000001B8BC"
   }
 }
