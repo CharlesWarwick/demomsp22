@@ -1,8 +1,8 @@
 {
   "entityId": "1-f2f981e7-fdaa-410d-be51-f8669bdb4f1d",
-  "createdDateTime": "",
-  "displayName": "",
-  "lastModifiedDateTime": "",
+  "createdDateTime": "2022-07-28T21:36:04Z",
+  "displayName": "Webinar2021",
+  "lastModifiedDateTime": "2022-07-28T21:39:00Z",
   "pages": [
     {
       "id": "1-850cd2a4116d45efb3a8b94729d5b7ce!30-c0191e8e-1645-4ec8-a2d1-acc299684e47",
@@ -12,7 +12,7 @@
       "parentSectionId": "1-c0191e8e-1645-4ec8-a2d1-acc299684e47",
       "parentSectionDisplayName": "1, Webinar 2021",
       "notebookId": "1-f2f981e7-fdaa-410d-be51-f8669bdb4f1d",
-      "pageContent": "{\u0022status\u0022:400,\u0022message\u0022:\u0022Code: tooManyRetries\\r\\nMessage: More than 3 retries encountered while sending the request.\\r\\n\u0022,\u0022stackTrace\u0022:\u0022   at Microsoft.Graph.RetryHandler.SendRetryAsync(HttpResponseMessage response, CancellationToken cancellationToken)\\r\\n   at Microsoft.Graph.RetryHandler.SendAsync(HttpRequestMessage httpRequest, CancellationToken cancellationToken)\\r\\n   at Microsoft.Graph.AuthenticationHandler.SendAsync(HttpRequestMessage httpRequestMessage, CancellationToken cancellationToken)\\r\\n   at System.Net.Http.HttpClient.\u003CSendAsync\u003Eg__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\\r\\n   at GraphIntegration.Functions.GraphProxy.Run(HttpRequestData req) in C:\\\\Users\\\\chung\\\\DeskDirector\\\\GraphIntegration\\\\Functions\\\\GraphProxy.cs:line 92\u0022}"
+      "pageContent": "\u003Chtml lang=\u0022en-NZ\u0022\u003E\r\n\t\u003Chead\u003E\r\n\t\t\u003Ctitle\u003ERefresher on DeskDirector\u003C/title\u003E\r\n\t\t\u003Cmeta http-equiv=\u0022Content-Type\u0022 content=\u0022text/html; charset=utf-8\u0022 /\u003E\r\n\t\t\u003Cmeta name=\u0022created\u0022 content=\u00222021-04-28T20:51:00.0000000\u0022 /\u003E\r\n\t\u003C/head\u003E\r\n\t\u003Cbody data-absolute-enabled=\u0022true\u0022 style=\u0022font-family:Calibri;font-size:11pt\u0022\u003E\r\n\t\t\u003Cdiv style=\u0022position:absolute;left:84px;top:114px;width:759px\u0022\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\t\u003Cp lang=\u0022en-US\u0022 style=\u0022margin-top:0pt;margin-bottom:0pt\u0022\u003E\u003Cspan style=\u0022font-family:Century Gothic;font-size:28pt\u0022\u003E\uFFFC\u003C/span\u003E\u003Cbr /\u003E\r\n\t\t\t\u003Cspan style=\u0022font-family:Century Gothic;font-size:28pt\u0022\u003E \t\t\t\u003C/span\u003E\u003C/p\u003E\r\n\t\t\t\u003Cp style=\u0022margin-top:5.5pt;margin-bottom:5.5pt\u0022\u003E\u003Cbr /\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\t\u003C/p\u003E\r\n\t\t\u003C/div\u003E\r\n\t\u003C/body\u003E\r\n\u003C/html\u003E\r\n"
     },
     {
       "id": "1-1ca0141178714108b4f330779df06312!118-c0191e8e-1645-4ec8-a2d1-acc299684e47",
@@ -72,7 +72,7 @@
       "parentSectionId": "1-c0191e8e-1645-4ec8-a2d1-acc299684e47",
       "parentSectionDisplayName": "1, Webinar 2021",
       "notebookId": "1-f2f981e7-fdaa-410d-be51-f8669bdb4f1d",
-      "pageContent": "{\u0022status\u0022:400,\u0022message\u0022:\u0022Code: tooManyRetries\\r\\nMessage: More than 3 retries encountered while sending the request.\\r\\n\u0022,\u0022stackTrace\u0022:\u0022   at Microsoft.Graph.RetryHandler.SendRetryAsync(HttpResponseMessage response, CancellationToken cancellationToken)\\r\\n   at Microsoft.Graph.RetryHandler.SendAsync(HttpRequestMessage httpRequest, CancellationToken cancellationToken)\\r\\n   at Microsoft.Graph.AuthenticationHandler.SendAsync(HttpRequestMessage httpRequestMessage, CancellationToken cancellationToken)\\r\\n   at System.Net.Http.HttpClient.\u003CSendAsync\u003Eg__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)\\r\\n   at GraphIntegration.Functions.GraphProxy.Run(HttpRequestData req) in C:\\\\Users\\\\chung\\\\DeskDirector\\\\GraphIntegration\\\\Functions\\\\GraphProxy.cs:line 92\u0022}"
+      "pageContent": "\u003Chtml lang=\u0022en-NZ\u0022\u003E\r\n\t\u003Chead\u003E\r\n\t\t\u003Ctitle\u003EWhat if they don\u2019t start at Form\u003C/title\u003E\r\n\t\t\u003Cmeta http-equiv=\u0022Content-Type\u0022 content=\u0022text/html; charset=utf-8\u0022 /\u003E\r\n\t\t\u003Cmeta name=\u0022created\u0022 content=\u00222021-04-28T22:50:00.0000000\u0022 /\u003E\r\n\t\u003C/head\u003E\r\n\t\u003Cbody data-absolute-enabled=\u0022true\u0022 style=\u0022font-family:Calibri;font-size:11pt\u0022\u003E\r\n\t\t\u003Cdiv style=\u0022position:absolute;left:48px;top:114px;width:720px\u0022\u003E\r\n\t\t\t\u003Cimg width=\u0022982\u0022 height=\u0022647\u0022 src=\u0022https://graph.microsoft.com/v1.0/siteCollections/ddportal.sharepoint.com,38194263-ff24-4189-8ef7-08a182238089,a0181d41-6614-4bf3-9bcd-9d015c98d379/onenote/resources/1-35c499c9066d409988df2f071ae62487!1-c0191e8e-1645-4ec8-a2d1-acc299684e47/$value\u0022 data-src-type=\u0022image/jpeg\u0022 data-fullres-src=\u0022https://graph.microsoft.com/v1.0/siteCollections/ddportal.sharepoint.com,38194263-ff24-4189-8ef7-08a182238089,a0181d41-6614-4bf3-9bcd-9d015c98d379/onenote/resources/1-35c499c9066d409988df2f071ae62487!1-c0191e8e-1645-4ec8-a2d1-acc299684e47/$value\u0022 data-fullres-src-type=\u0022image/jpeg\u0022 /\u003E\r\n\t\t\t\u003Cbr /\u003E\r\n\t\t\u003C/div\u003E\r\n\t\u003C/body\u003E\r\n\u003C/html\u003E\r\n"
     },
     {
       "id": "1-e6f002e27f0046009a20efe108921f2a!208-c0191e8e-1645-4ec8-a2d1-acc299684e47",
